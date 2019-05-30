@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>VisualGDB 5.2 子进程调试 遇到的问题 | 胡言随语</title>
+<title>TortoiseGit 右键菜单 全部折叠到二级菜单中 | 胡言随语</title>
 <meta name="description" content="">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -98,50 +98,106 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">VisualGDB 5.2 子进程调试 遇到的问题</h2>
+            <h2 class="post-title">TortoiseGit 右键菜单 全部折叠到二级菜单中</h2>
             <div class="post-date">2019-05-30</div>
             
-              <div class="feature-container" style="background-image: url('https://badsn.com/post-images/visualgdb-52-zi-jin-cheng-diao-shi-yu-dao-de-wen-ti.png')">
+              <div class="feature-container" style="background-image: url('https://badsn.com/post-images/tortoisegit-you-jian-cai-dan-quan-bu-zhe-die-dao-er-ji-cai-dan-zhong.png')">
               </div>
             
             <div class="post-content">
-              <p>VisualGDB 是 Visual Studio 的一个插件，用于在 Windows 下开发 Linux 程序，记录 VisualGDB 调试 Linux 子进程方法</p>
-<!-- more -->
+              <p>TortoiseGit 和 TortoiseSVN 都安装时，右键菜单会很长，尝试将 TortoiseGit 的 Clone 菜单折叠到二级菜单中</p>
+<!--more-->
+<p>默认效果：
+<img src="https://badsn.com/post-images/1559204682888.png" alt=""></p>
+<p>太占空间，希望能把两个菜单折叠到一个里。</p>
+<h2 id="查找资料">查找资料</h2>
 <ul>
-<li>问题描述：</li>
+<li>
+<p>google，百度 查找右键菜单。</p>
+</li>
+<li>
+<p>查找折叠菜单，二级菜单，均没有实现。</p>
+</li>
 </ul>
-<p>在 GDB 调试中，使用下面命令进行子进程调试，但在 VisualGDB 工程属性中 startup before 设置并不能生效</p>
-<pre><code>    set follow-fork-mode child
+<h2 id="解决办法">解决办法</h2>
+<ul>
+<li>上面百度到右键菜单在注册表相关，桌面右键为例：</li>
+</ul>
+<p>普通右键菜单：
+<code>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\Background\shell</code>
+可以看到下面有 “在此处运行 CMD”
+COM组件右键菜单：
+<code>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\Background\shellex</code>
+可以看到下面有 TortoiseGit 和 TortoiseSVN 和其他的（新建，分享，小工具）。</p>
+<ul>
+<li>实验解决办法 一（未成功）</li>
+</ul>
+<p>在 shell 下创建子菜单，将 COM 组件的菜单移到里面。失败。。。。</p>
+<ul>
+<li>实验解决办法 二 （成功）</li>
+</ul>
+<p>突然想到 这个是开源项目啊，还有一个修改代码实现的方法，查看 TortoiseGit 右键菜单的 CLSID :
+<code>{10A0FDD2-B0C0-4CD4-A7AE-E594CE3B91C8}</code>
+可以看到注册的 dll 文件：
+<code>TortoiseGitStub.dll</code></p>
+<h2 id="tortoisegit-源码编译">TortoiseGit 源码编译</h2>
+<ul>
+<li>TortoiseGit 的源码在 gitlab, clone 下来</li>
+</ul>
+<p><code>git clone https://gitlab.com/tortoisegit/tortoisegit.git</code></p>
+<p>克隆的有点慢，可以设置下代理 :wink:：</p>
+<pre><code class="language-shell">git config --global http.proxy &quot;10.0.1.1:1080&quot;
+git config --global https.proxy &quot;10.0.1.1:1080&quot;
 </code></pre>
 <ul>
-<li>解决办法</li>
+<li>我现在用的是官网最新稳定版 2.5</li>
 </ul>
-<ol>
-<li>VisualGDB 工程属性中 startup before 设置</li>
-</ol>
-<pre><code>    set follow-fork-mode child
+<p>看下tag，切换到 2.5
+<code>git checkout REL_2.5.0.0_EXTERNAL</code>
+查看 build.txt，依次 加载子模块，补丁。</p>
+<pre><code class="language-shell">git submodule update --init
+cd ext/libgit2
+for %%G in (..\libgit2-*.patch) do ( type %%G | git am --3way )
 </code></pre>
-<ol start="2">
-<li>调试，出现 SIGHUP 异常中断</li>
-</ol>
-<p><img src="https://badsn.com/post-images/1559203564747.png" alt="">
-然后打开异常设置，如图勾选
-<img src="https://badsn.com/post-images/1559203600985.png" alt="">
-完成此步骤后，调试子进程会不进入。</p>
-<ol start="3">
-<li>调试子进程不进入</li>
-</ol>
-<p>调试窗口 -- GDB Session -- Signals &amp; Catchpoint （倒数第二个闪电按钮），取消 选择 SIGHUP 后面的 Pass to 选框
-<img src="https://badsn.com/post-images/1559203615892.png" alt=""></p>
+<p>编译工程 TortoiseShell 完成得到 TortoiseGit.dll，后面浏览代码发现菜单添加在这里面。</p>
+<h2 id="修改代码">修改代码</h2>
+<ul>
+<li>工程 TortoiseShell 中 ContextMenu.cpp：1047</li>
+</ul>
+<pre><code class="language-C++">bIsTop = ((topmenu &amp; menuInfo[menuIndex].menuID) != 0);
+//bIsTop = false;
+// insert the menu entry
+InsertGitMenu(	bIsTop,
+	bIsTop ? hMenu : subMenu,
+	bIsTop ? indexMenu++ : indexSubMenu++,
+	idCmd++,
+	menuInfo[menuIndex].menuTextID,
+	bShowIcons ? menuInfo[menuIndex].iconID : 0,
+	idCmdFirst,
+	menuInfo[menuIndex].command,
+	uFlags);
+</code></pre>
+<p>简单的修改了 bIsTop，导致问是 最前面不会添加 &quot;Git &quot;，影响不大。</p>
+<ul>
+<li>编译出 TortoiseGit.dll</li>
+</ul>
+<p>替换和删除会不允许，但是可以重命名。放入新的之后重启资源管理器</p>
+<p><code>taskkill /f /im explorer.exe &amp;&amp; start explorer</code></p>
+<h2 id="最后效果">最后效果：</h2>
+<p><img src="https://badsn.com/post-images/1559204726316.png" alt=""></p>
+<h2 id="下载地址">下载地址</h2>
+<p><a href="http://p.ucc.vc/1.%E5%BF%85%E5%A4%87%E5%B7%A5%E5%85%B7/TortoiseGit/TortoiseGit.zip">TortoiseGit.zip</a></p>
+<hr>
+<p>TortoiseSVN 的后面有时间再看看。。。</p>
 
             </div>
             
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://badsn.com/post/hello-gridea">
+                <a href="https://badsn.com/post/ji-lu-idea-shi-yong-zhong-yu-dao-de-wen-ti">
                   <h3 class="post-title">
-                    Hello Gridea
+                    IDEA 使用笔记
                   </h3>
                 </a>
               </div>

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>IDEA 创建 Struts2 简单工程 | 胡言随语</title>
+<meta name="description" content="">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://badsn.com/favicon.ico?v=1559204890885">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://badsn.com/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://badsn.com">
+        <img src="https://badsn.com/images/avatar.png?v=1559204890885" class="site-logo">
+        <h1 class="site-title">胡言随语</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://badsn.com/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">IDEA 创建 Struts2 简单工程</h2>
+            <div class="post-date">2019-05-30</div>
+            
+              <div class="feature-container" style="background-image: url('https://badsn.com/post-images/idea-chuang-jian-struts2-jian-dan-gong-cheng.png')">
+              </div>
+            
+            <div class="post-content">
+              <p>IDEA 和 Struts2 参考其他资料的 HelloWorld</p>
+<!--more-->
+<h3 id="基本环境">基本环境</h3>
+<ul>
+<li>JAVA 配置</li>
+<li>Tomcat 配置</li>
+</ul>
+<h3 id="工程创建">工程创建</h3>
+<ul>
+<li>下载 Struts 2</li>
+<li>创建 Hello World 工程</li>
+<li>修复 Project Setting</li>
+</ul>
+<h3 id="测试源码">测试源码</h3>
+<ul>
+<li>添加测试源码</li>
+</ul>
+<hr>
+<h2 id="基本环境-2">基本环境</h2>
+<blockquote>
+<p>已经熟悉如何配置则跳过基本环境配置。</p>
+</blockquote>
+<h3 id="工程默认-java-设置">工程默认 JAVA 设置</h3>
+<ul>
+<li>
+<p>选择设置 File -&gt; Other Settings -&gt; Default Project Structure...
+<img src="https://badsn.com/post-images/1559204110304.png" alt=""></p>
+</li>
+<li>
+<p>Project Settings -&gt; Project
+<img src="https://badsn.com/post-images/1559204120489.png" alt=""></p>
+</li>
+<li>
+<p>添加 JAVA 目录后完成设置
+<img src="https://badsn.com/post-images/1559204126983.png" alt=""></p>
+</li>
+</ul>
+<h3 id="tomcat-配置">Tomcat 配置</h3>
+<ul>
+<li>
+<p>选择设置 File -&gt; Other Settings...
+<img src="https://badsn.com/post-images/1559204140398.png" alt=""></p>
+</li>
+<li>
+<p>Build, Execution, Deployment -&gt; Application Servers
+<img src="https://badsn.com/post-images/1559204146703.png" alt=""></p>
+</li>
+<li>
+<p>点击 + 号, 选择 Tomcat Server
+<img src="https://badsn.com/post-images/1559204156872.png" alt=""></p>
+</li>
+</ul>
+<p>选择本地 Tomcat 目录后添加完成。</p>
+<h2 id="工程创建-2">工程创建</h2>
+<ul>
+<li>首先到官网下载 Struts2 依赖</li>
+</ul>
+<blockquote>
+<p>http://mirrors.tuna.tsinghua.edu.cn/apache/struts/2.3.34/struts-2.3.34-min-lib.zip</p>
+</blockquote>
+<p>解压到 path_to_your_project/lib 下</p>
+<blockquote>
+<p>struts_hello/lib</p>
+</blockquote>
+<ul>
+<li>
+<p>IDEA 选择 File -&gt; New -&gt; Project
+<img src="https://badsn.com/post-images/1559204209475.png" alt=""></p>
+</li>
+<li>
+<p>选择 Java Enterprise -&gt; Struts 2
+<img src="https://badsn.com/post-images/1559204214949.png" alt=""></p>
+</li>
+<li>
+<p>Library 选择上面下载的 2.3 目录</p>
+</li>
+</ul>
+<p>也可以直接使用 Download 选项的 2.5，注意 2.5 版本依赖的 log4j
+<img src="https://badsn.com/post-images/1559204222775.png" alt=""></p>
+<ul>
+<li>
+<p>添加完成
+<img src="https://badsn.com/post-images/1559204228179.png" alt=""></p>
+</li>
+<li>
+<p>选择目录
+<img src="https://badsn.com/post-images/1559204233146.png" alt=""></p>
+</li>
+<li>
+<p>创建完成后 目录结构
+<img src="https://badsn.com/post-images/1559204237787.png" alt=""></p>
+</li>
+<li>
+<p>打开工程设置
+<img src="https://badsn.com/post-images/1559204242258.png" alt=""></p>
+</li>
+<li>
+<p>Project Settings -&gt; Artifacts</p>
+</li>
+</ul>
+<p>可以看到有个 Problems
+<img src="https://badsn.com/post-images/1559204247954.png" alt=""></p>
+<p>点击 Fix 按钮，选择 Add &quot;Struts2&quot; to the Artifacts；
+或者
+双击 Available Elements 窗口下的 Struts 2
+将 Struts2 依赖添加到 部署输出目录中。
+<img src="https://badsn.com/post-images/1559204254075.png" alt=""></p>
+<h2 id="测试源码-2">测试源码</h2>
+<blockquote>
+<p>在工程目录下添加下面文件</p>
+</blockquote>
+<ul>
+<li>src/beans/Production.java</li>
+</ul>
+<pre><code class="language-java">package beans;
+
+public class Production {
+    private int proId;
+    private String proName;
+    private String proDesc;
+    private String proPrice;
+
+
+    public Production(int proId, String proName, String proDesc, String proPrice) {
+        this.proId = proId;
+        this.proName = proName;
+        this.proDesc = proDesc;
+        this.proPrice = proPrice;
+    }
+
+    public Production() {
+    }
+
+    @Override
+    public String toString() {
+        return &quot;Production{&quot; +
+                &quot;proId=&quot; + proId +
+                &quot;, proName='&quot; + proName + '\'' +
+                &quot;, proDesc='&quot; + proDesc + '\'' +
+                &quot;, proPrice='&quot; + proPrice + '\'' +
+                '}';
+    }
+
+    public int getProId() {
+        return proId;
+    }
+
+    public void setProId(int proId) {
+        this.proId = proId;
+    }
+
+    public String getProName() {
+        return proName;
+    }
+
+    public void setProName(String proName) {
+        this.proName = proName;
+    }
+
+    public String getProDesc() {
+        return proDesc;
+    }
+
+    public void setProDesc(String proDesc) {
+        this.proDesc = proDesc;
+    }
+
+    public String getProPrice() {
+        return proPrice;
+    }
+
+    public void setProPrice(String proPrice) {
+        this.proPrice = proPrice;
+    }
+
+    public String save() {
+
+        System.out.println(&quot;result:&quot; + this);
+        return &quot;detail&quot;;
+    }
+}
+
+</code></pre>
+<ul>
+<li>web/details.jsp</li>
+</ul>
+<pre><code class="language-jsp">&lt;%@ page contentType=&quot;text/html;charset=UTF-8&quot; language=&quot;java&quot; %&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;details&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    productID:${proId}&lt;br&gt;
+    productName:${proName}&lt;br&gt;
+    productDesc:${proDesc}&lt;br&gt;
+    productPrice:${proPrice}&lt;br&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<ul>
+<li>web/input.jsp</li>
+</ul>
+<pre><code class="language-jsp">&lt;%@ page contentType=&quot;text/html;charset=UTF-8&quot; language=&quot;java&quot; %&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;输入内容&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form action=&quot;product-save.action&quot; method=&quot;post&quot;&gt;
+    productName:&lt;input type=&quot;text&quot; name=&quot;proName&quot;&gt;&lt;br&gt;
+    productDesc:&lt;input type=&quot;text&quot; name=&quot;proDesc&quot;&gt;&lt;br&gt;
+    productPrice:&lt;input type=&quot;text&quot; name=&quot;proPrice&quot;&gt;&lt;br&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;确定&quot;&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<blockquote>
+<p>修改下面文件，具体内容如下</p>
+</blockquote>
+<ul>
+<li>web/WEB-INF/web.xm</li>
+</ul>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;web-app xmlns=&quot;http://xmlns.jcp.org/xml/ns/javaee&quot;
+         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xsi:schemaLocation=&quot;http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd&quot;
+         version=&quot;3.1&quot;&gt;
+    &lt;filter&gt;
+        &lt;filter-name&gt;struts2&lt;/filter-name&gt;
+        &lt;filter-class&gt;org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter&lt;/filter-class&gt;
+    &lt;/filter&gt;
+    &lt;filter-mapping&gt;
+        &lt;filter-name&gt;struts2&lt;/filter-name&gt;
+        &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+    &lt;/filter-mapping&gt;
+    &lt;welcome-file-list&gt;
+        &lt;welcome-file&gt;index.jsp&lt;/welcome-file&gt;
+    &lt;/welcome-file-list&gt;
+&lt;/web-app&gt;
+</code></pre>
+<ul>
+<li>web/index.jsp</li>
+</ul>
+<pre><code class="language-jsp">&lt;%@ page contentType=&quot;text/html;charset=UTF-8&quot; language=&quot;java&quot; %&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;输入内容&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form action=&quot;product-save.action&quot; method=&quot;post&quot;&gt;
+    productName:&lt;input type=&quot;text&quot; name=&quot;proName&quot;&gt;&lt;br&gt;
+    productDesc:&lt;input type=&quot;text&quot; name=&quot;proDesc&quot;&gt;&lt;br&gt;
+    productPrice:&lt;input type=&quot;text&quot; name=&quot;proPrice&quot;&gt;&lt;br&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;确定&quot;&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<ul>
+<li>src/struts.xml</li>
+</ul>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+
+&lt;!DOCTYPE struts PUBLIC
+        &quot;-//Apache Software Foundation//DTD Struts Configuration 2.3//EN&quot;
+        &quot;http://struts.apache.org/dtds/struts-2.3.dtd&quot;&gt;
+
+&lt;struts&gt;
+    &lt;!--&lt;constant name=&quot;struts.devMode&quot; value=&quot;true&quot;/&gt;--&gt;
+    &lt;package name=&quot;default&quot; extends=&quot;struts-default&quot;&gt;
+
+        &lt;!--首页请求，name对应index.jsp中的action名字--&gt;
+        &lt;action name=&quot;product-input&quot;&gt;
+
+            &lt;!--转到input.jsp页面--&gt;
+            &lt;result&gt;/input.jsp&lt;/result&gt;
+        &lt;/action&gt;
+
+
+        &lt;!--第二个action请求，name对应input.jsp下的action名字
+        引用对象以及其方法--&gt;
+        &lt;action name=&quot;product-save&quot; class=&quot;beans.Production&quot; method=&quot;save&quot;&gt;
+
+            &lt;!--引用方法中返回的detai，对应name，展示到details下--&gt;
+            &lt;result name=&quot;detail&quot;&gt;/details.jsp&lt;/result&gt;
+
+        &lt;/action&gt;
+
+    &lt;/package&gt;
+&lt;/struts&gt;
+</code></pre>
+<p>添加完成后点击 Run
+<img src="https://badsn.com/post-images/1559204183108.png" alt=""></p>
+<p>等待 Tomcat 启动成功，自动打开浏览器：
+<img src="https://badsn.com/post-images/1559204273264.png" alt=""></p>
+<p><img src="https://badsn.com/post-images/1559204278802.png" alt=""></p>
+<p><img src="https://badsn.com/post-images/1559204283631.png" alt=""></p>
+<p><img src="https://badsn.com/post-images/1559204293114.png" alt=""></p>
+<h2 id="参考引用">参考引用</h2>
+<blockquote>
+<ol>
+<li><a href="http://struts.apache.org/getting-started/hello-world-using-struts2.html" title="Hello World Using Struts 2">Hello World Using Struts 2</a></li>
+<li><a href="http://www.cnblogs.com/share2015/p/5279605.html" title="idea 配置一个struts2的简单的helloWorld">idea 配置一个struts2的简单的helloWorld</a></li>
+<li><a href="https://jingyan.baidu.com/article/6b97984dc9f1a31ca2b0bf24.html" title="idea设置程序默认使用JDK">idea设置程序默认使用JDK</a></li>
+<li><a href="http://blog.csdn.net/dream_an/article/details/49020211" title="intellij IDEA配置tomcat">intellij IDEA配置tomcat</a></li>
+</ol>
+</blockquote>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://badsn.com/post/visualgdb-52-zi-jin-cheng-diao-shi-yu-dao-de-wen-ti">
+                  <h3 class="post-title">
+                    VisualGDB 5.2 子进程调试 遇到的问题
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '9ca4dc29dfa5900671ec',
+        clientSecret: '76eaeef86bada8ef067339444498ce11ac433321',
+        repo: 'neighbads.github.io',
+        owner: 'neighbads',
+        admin: ['neighbads'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
