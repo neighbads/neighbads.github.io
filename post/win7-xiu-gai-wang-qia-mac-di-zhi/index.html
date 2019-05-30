@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>TortoiseGit 右键菜单 全部折叠到二级菜单中 | 胡言随语</title>
+<title>Win7 修改网卡 MAC 地址 | 胡言随语</title>
 <meta name="description" content="">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -98,106 +98,67 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">TortoiseGit 右键菜单 全部折叠到二级菜单中</h2>
+            <h2 class="post-title">Win7 修改网卡 MAC 地址</h2>
             <div class="post-date">2019-05-30</div>
             
-              <div class="feature-container" style="background-image: url('https://badsn.com/post-images/tortoisegit-you-jian-cai-dan-quan-bu-zhe-die-dao-er-ji-cai-dan-zhong.png')">
+              <div class="feature-container" style="background-image: url('https://badsn.com/post-images/win7-xiu-gai-wang-qia-mac-di-zhi.jpg')">
               </div>
             
             <div class="post-content">
-              <p>TortoiseGit 和 TortoiseSVN 都安装时，右键菜单会很长，尝试将 TortoiseGit 的 Clone 菜单折叠到二级菜单中</p>
+              <p>Win7 下修改网卡的 Mac 地址</p>
 <!--more-->
-<p>默认效果：
-<img src="https://badsn.com/post-images/1559204682888.png" alt=""></p>
-<p>太占空间，希望能把两个菜单折叠到一个里。</p>
-<h2 id="查找资料">查找资料</h2>
+<p>##操作步骤</p>
 <ul>
-<li>
-<p>google，百度 查找右键菜单。</p>
-</li>
-<li>
-<p>查找折叠菜单，二级菜单，均没有实现。</p>
-</li>
+<li>查看网卡的驱动关键字</li>
 </ul>
-<h2 id="解决办法">解决办法</h2>
+<p>用你熟悉的方式打开是配置设置，然后点击属性：
+<img src="https://badsn.com/post-images/1559205048893.png" alt=""></p>
+<p>然后点击配置，在详细信息里找到 “驱动程序关键字”：
+<img src="https://badsn.com/post-images/1559205054562.png" alt=""></p>
+<p>记录：</p>
+<p><code>{4d36e972-e325-11ce-bfc1-08002be10318}\0012</code></p>
 <ul>
-<li>上面百度到右键菜单在注册表相关，桌面右键为例：</li>
+<li>打开注册表</li>
 </ul>
-<p>普通右键菜单：
-<code>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\Background\shell</code>
-可以看到下面有 “在此处运行 CMD”
-COM组件右键菜单：
-<code>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\Background\shellex</code>
-可以看到下面有 TortoiseGit 和 TortoiseSVN 和其他的（新建，分享，小工具）。</p>
+<p>注册表位置是：</p>
+<p><code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\</code></p>
+<p>后面添加上一步记录的 CLSID 得到：</p>
+<p><code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0012</code></p>
+<p>打开注册表，可以看到一些信息，确认是当前网卡注册表。</p>
 <ul>
-<li>实验解决办法 一（未成功）</li>
+<li>修改或添加注册表</li>
 </ul>
-<p>在 shell 下创建子菜单，将 COM 组件的菜单移到里面。失败。。。。</p>
+<p>打开上面目录下的</p>
+<p><code>*\Ndi\Params\NetworkAddress</code></p>
+<p>查看到内容：
+<img src="https://badsn.com/post-images/1559205062009.png" alt=""></p>
+<p>可以看到 “ParamDesc” 的描述是 “本地管理地址”，继续第一步，打开高级选项卡，找到 “本地管理地址”选项，填写地址即可：
+<img src="https://badsn.com/post-images/1559205067084.png" alt=""></p>
+<p>然后查看 MAC 地址已经被修改了。</p>
 <ul>
-<li>实验解决办法 二 （成功）</li>
+<li>未找到注册表</li>
 </ul>
-<p>突然想到 这个是开源项目啊，还有一个修改代码实现的方法，查看 TortoiseGit 右键菜单的 CLSID :
-<code>{10A0FDD2-B0C0-4CD4-A7AE-E594CE3B91C8}</code>
-可以看到注册的 dll 文件：
-<code>TortoiseGitStub.dll</code></p>
-<h2 id="tortoisegit-源码编译">TortoiseGit 源码编译</h2>
-<ul>
-<li>TortoiseGit 的源码在 gitlab, clone 下来</li>
-</ul>
-<p><code>git clone https://gitlab.com/tortoisegit/tortoisegit.git</code></p>
-<p>克隆的有点慢，可以设置下代理 :wink:：</p>
-<pre><code class="language-shell">git config --global http.proxy &quot;10.0.1.1:1080&quot;
-git config --global https.proxy &quot;10.0.1.1:1080&quot;
+<p>如果未找到 “NetworkAddress” 注册表，可以手动添加，注册表内容如下：</p>
+<pre><code class="language-shell">Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4D36E972-E325-11CE-BFC1-08002BE10318}\0012\Ndi\Params\NetworkAddress]
+&quot;ParamDesc&quot;=&quot;本地管理地址&quot;
+&quot;Default&quot;=&quot;&quot;
+&quot;type&quot;=&quot;edit&quot;
+&quot;LimitText&quot;=&quot;12&quot;
+&quot;UpperCase&quot;=&quot;1&quot;
+&quot;optional&quot;=&quot;1&quot;
+
 </code></pre>
-<ul>
-<li>我现在用的是官网最新稳定版 2.5</li>
-</ul>
-<p>看下tag，切换到 2.5
-<code>git checkout REL_2.5.0.0_EXTERNAL</code>
-查看 build.txt，依次 加载子模块，补丁。</p>
-<pre><code class="language-shell">git submodule update --init
-cd ext/libgit2
-for %%G in (..\libgit2-*.patch) do ( type %%G | git am --3way )
-</code></pre>
-<p>编译工程 TortoiseShell 完成得到 TortoiseGit.dll，后面浏览代码发现菜单添加在这里面。</p>
-<h2 id="修改代码">修改代码</h2>
-<ul>
-<li>工程 TortoiseShell 中 ContextMenu.cpp：1047</li>
-</ul>
-<pre><code class="language-C++">bIsTop = ((topmenu &amp; menuInfo[menuIndex].menuID) != 0);
-//bIsTop = false;
-// insert the menu entry
-InsertGitMenu(	bIsTop,
-	bIsTop ? hMenu : subMenu,
-	bIsTop ? indexMenu++ : indexSubMenu++,
-	idCmd++,
-	menuInfo[menuIndex].menuTextID,
-	bShowIcons ? menuInfo[menuIndex].iconID : 0,
-	idCmdFirst,
-	menuInfo[menuIndex].command,
-	uFlags);
-</code></pre>
-<p>简单的修改了 bIsTop，导致问是 最前面不会添加 &quot;Git &quot;，影响不大。</p>
-<ul>
-<li>编译出 TortoiseGit.dll</li>
-</ul>
-<p>替换和删除会不允许，但是可以重命名。放入新的之后重启资源管理器</p>
-<p><code>taskkill /f /im explorer.exe &amp;&amp; start explorer</code></p>
-<h2 id="最后效果">最后效果：</h2>
-<p><img src="https://badsn.com/post-images/1559204726316.png" alt=""></p>
-<h2 id="下载地址">下载地址</h2>
-<p><a href="http://p.ucc.vc/1.%E5%BF%85%E5%A4%87%E5%B7%A5%E5%85%B7/TortoiseGit/TortoiseGit.zip">TortoiseGit.zip</a></p>
-<hr>
-<p>TortoiseSVN 的后面有时间再看看。。。</p>
 
             </div>
             
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://badsn.com/post/ji-lu-idea-shi-yong-zhong-yu-dao-de-wen-ti">
+                <a href="https://badsn.com/post/tortoisegit-you-jian-cai-dan-quan-bu-zhe-die-dao-er-ji-cai-dan-zhong">
                   <h3 class="post-title">
-                    IDEA 使用笔记
+                    TortoiseGit 右键菜单 全部折叠到二级菜单中
                   </h3>
                 </a>
               </div>

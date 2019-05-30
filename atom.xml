@@ -2,13 +2,24 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://badsn.com</id>
     <title>胡言随语</title>
-    <updated>2019-05-30T08:29:08.672Z</updated>
+    <updated>2019-05-30T08:32:36.136Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://badsn.com"/>
     <link rel="self" href="https://badsn.com/atom.xml"/>
     <logo>https://badsn.com/images/avatar.png</logo>
     <icon>https://badsn.com/favicon.ico</icon>
     <rights>All rights reserved 2019, 胡言随语</rights>
+    <entry>
+        <title type="html"><![CDATA[Win7 修改网卡 MAC 地址]]></title>
+        <id>https://badsn.com/post/win7-xiu-gai-wang-qia-mac-di-zhi</id>
+        <link href="https://badsn.com/post/win7-xiu-gai-wang-qia-mac-di-zhi">
+        </link>
+        <updated>2019-05-30T08:29:57.000Z</updated>
+        <summary type="html"><![CDATA[<p>Win7 下修改网卡的 Mac 地址</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>Win7 下修改网卡的 Mac 地址</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[TortoiseGit 右键菜单 全部折叠到二级菜单中]]></title>
         <id>https://badsn.com/post/tortoisegit-you-jian-cai-dan-quan-bu-zhe-die-dao-er-ji-cai-dan-zhong</id>
