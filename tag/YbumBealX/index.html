@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Windows 注册表笔记 | 胡言随语</title>
+<title>VisualGDB | 胡言随语</title>
 <meta name="description" content="">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -13,12 +13,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://badsn.com/styles/main.css">
 
-
-  
-    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
-  
-
-  
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -97,75 +91,34 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <div class="post-detail">
-            <h2 class="post-title">Windows 注册表笔记</h2>
-            <div class="post-date">2019-05-30</div>
-            
-              <div class="feature-container" style="background-image: url('https://badsn.com/post-images/windows-zhu-ce-biao-bi-ji.jpg')">
-              </div>
-            
-            <div class="post-content">
-              <p>记录遇到使用过的 Windows 注册表相关</p>
-<!--more-->
-<h2 id="问题类">问题类</h2>
-<ul>
-<li>
-<p>描述
-某个软件，不能选择应用为默认打开程序。例如 <code>.jar</code> 文件，默认使用 <code>jd-gui.exe</code> 打开。选择默认程序窗口中，浏览 <code>jd-gui.exe</code> 并没有在列表中出现。</p>
-</li>
-<li>
-<p>原因
-原有使用 <code>jd-gui.exe</code> 打开，但程序路径发生改变，注册表保存了原有的路径。</p>
-</li>
-<li>
-<p>解决
-删除注册表</p>
-</li>
-</ul>
-<pre><code class="language-bash">HKEY_CURRENT_USER\Software\Classes\Applications\jd-gui.exe
-</code></pre>
-<hr>
-<h2 id="应用类">应用类</h2>
-<hr>
-
-            </div>
-            
-              <div class="tag-container">
-                
-                  <a href="https://badsn.com/tag/nBCyNz-RP" class="tag">
-                    Windows
-                  </a>
-                
-                  <a href="https://badsn.com/tag/FOcgzGK_G" class="tag">
-                    Windows 7
-                  </a>
-                
-                  <a href="https://badsn.com/tag/1Vnn-YsWE" class="tag">
-                    Registry
-                  </a>
-                
-              </div>
-            
-            
-              <div class="next-post">
-                <div class="next">下一篇</div>
-                <a href="https://badsn.com/post/win7-xiu-gai-wang-qia-mac-di-zhi">
-                  <h3 class="post-title">
-                    Win7 修改网卡 MAC 地址
-                  </h3>
+          <h2 class="current-tag">标签: VisualGDB</h2>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://badsn.com/post/visualgdb-52-zi-jin-cheng-diao-shi-yu-dao-de-wen-ti">
+                  <h2 class="post-title">VisualGDB 5.2 子进程调试 遇到的问题</h2>
                 </a>
+                <div class="post-date">
+                  2019-05-30
+                </div>
+                <div class="post-abstract">
+                  <p>VisualGDB 是 Visual Studio 的一个插件，用于在 Windows 下开发 Linux 程序，记录 VisualGDB 调试 Linux 子进程方法</p>
+
+                </div>
               </div>
-            
-
-            
               
-                <div id="gitalk-container" data-aos="fade-in"></div>
+                <a class="right" href="https://badsn.com/post/visualgdb-52-zi-jin-cheng-diao-shi-yu-dao-de-wen-ti">
+                  <div class="feature-container" style="background-image: url('https://badsn.com/post-images/visualgdb-52-zi-jin-cheng-diao-shi-yu-dao-de-wen-ti.png')">
+                  </div>
+                </a>
               
+            </article>
+          
 
-              
-            
-
-          </div>
+          <div class="pagination-container">
+  
+  
+</div>
 
         </div>
       </div>
@@ -187,29 +140,6 @@ var app = new Vue({
 })
 
 </script>
-
-
-
-  
-    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-    <script>
-
-      var gitalk = new Gitalk({
-        clientID: '9ca4dc29dfa5900671ec',
-        clientSecret: '76eaeef86bada8ef067339444498ce11ac433321',
-        repo: 'neighbads.github.io',
-        owner: 'neighbads',
-        admin: ['neighbads'],
-        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
-        distractionFreeMode: false  // Facebook-like distraction free mode
-      })
-
-      gitalk.render('gitalk-container')
-
-    </script>
-  
-
-  
 
 
 
