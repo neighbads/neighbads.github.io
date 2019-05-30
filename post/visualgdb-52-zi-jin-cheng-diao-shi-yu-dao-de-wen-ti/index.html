@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>文章归档 | 胡言随语</title>
+<title>VisualGDB 5.2 子进程调试 遇到的问题 | 胡言随语</title>
 <meta name="description" content="">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -13,6 +13,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://badsn.com/styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -91,47 +97,65 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          
+          <div class="post-detail">
+            <h2 class="post-title">VisualGDB 5.2 子进程调试 遇到的问题</h2>
+            <div class="post-date">2019-05-30</div>
+            
+              <div class="feature-container" style="background-image: url('https://badsn.com/post-images/visualgdb-52-zi-jin-cheng-diao-shi-yu-dao-de-wen-ti.png')">
+              </div>
+            
+            <div class="post-content">
+              <p>VisualGDB 是 Visual Studio 的一个插件，用于在 Windows 下开发 Linux 程序，记录 VisualGDB 调试 Linux 子进程方法</p>
+<!-- more -->
+<ul>
+<li>问题描述：</li>
+</ul>
+<p>在 GDB 调试中，使用下面命令进行子进程调试，但在 VisualGDB 工程属性中 startup before 设置并不能生效</p>
+<pre><code>    set follow-fork-mode child
+</code></pre>
+<ul>
+<li>解决办法</li>
+</ul>
+<ol>
+<li>VisualGDB 工程属性中 startup before 设置</li>
+</ol>
+<pre><code>    set follow-fork-mode child
+</code></pre>
+<ol start="2">
+<li>调试，出现 SIGHUP 异常中断</li>
+</ol>
+<p><img src="https://badsn.com/post-images/1559203564747.png" alt="">
+然后打开异常设置，如图勾选
+<img src="https://badsn.com/post-images/1559203600985.png" alt="">
+完成此步骤后，调试子进程会不进入。</p>
+<ol start="3">
+<li>调试子进程不进入</li>
+</ol>
+<p>调试窗口 -- GDB Session -- Signals &amp; Catchpoint （倒数第二个闪电按钮），取消 选择 SIGHUP 后面的 Pass to 选框
+<img src="https://badsn.com/post-images/1559203615892.png" alt=""></p>
 
-          <h2 class="archives-title">文章归档</h2>
-          <div class="archives-container">
+            </div>
             
-              <h2 class="year" data-aos="fade-in" data-aos-delay="500">2019</h2>
-              
-                
-                  <article class="post">
-                    <a href="https://badsn.com/post/visualgdb-52-zi-jin-cheng-diao-shi-yu-dao-de-wen-ti">
-                      <h2 class="post-title">
-                        VisualGDB 5.2 子进程调试 遇到的问题
-                      </h2>
-                    </a>
-                  </article>
-                
-              
-                
-              
             
-              <h2 class="year" data-aos="fade-in" data-aos-delay="500">2018</h2>
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://badsn.com/post/hello-gridea">
+                  <h3 class="post-title">
+                    Hello Gridea
+                  </h3>
+                </a>
+              </div>
+            
+
+            
               
-                
+                <div id="gitalk-container" data-aos="fade-in"></div>
               
-                
-                  <article class="post">
-                    <a href="https://badsn.com/post/hello-gridea">
-                      <h2 class="post-title">
-                        Hello Gridea
-                      </h2>
-                    </a>
-                  </article>
-                
+
               
             
+
           </div>
-
-          <div class="pagination-container">
-  
-  
-</div>
 
         </div>
       </div>
@@ -153,6 +177,29 @@ var app = new Vue({
 })
 
 </script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '9ca4dc29dfa5900671ec',
+        clientSecret: '76eaeef86bada8ef067339444498ce11ac433321',
+        repo: 'neighbads.github.io',
+        owner: 'neighbads',
+        admin: ['neighbads'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 
