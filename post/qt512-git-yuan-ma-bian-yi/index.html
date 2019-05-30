@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Windows 注册表笔记 | 胡言随语</title>
+<title>Qt5.12 git 源码编译 | 胡言随语</title>
 <meta name="description" content="">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -98,44 +98,62 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">Windows 注册表笔记</h2>
+            <h2 class="post-title">Qt5.12 git 源码编译</h2>
             <div class="post-date">2019-05-30</div>
             
-              <div class="feature-container" style="background-image: url('https://badsn.com/post-images/windows-zhu-ce-biao-bi-ji.jpg')">
-              </div>
-            
             <div class="post-content">
-              <p>记录遇到使用过的 Windows 注册表相关</p>
-<!--more-->
-<h2 id="问题类">问题类</h2>
-<ul>
-<li>
-<p>描述
-某个软件，不能选择应用为默认打开程序。例如 <code>.jar</code> 文件，默认使用 <code>jd-gui.exe</code> 打开。选择默认程序窗口中，浏览 <code>jd-gui.exe</code> 并没有在列表中出现。</p>
-</li>
-<li>
-<p>原因
-原有使用 <code>jd-gui.exe</code> 打开，但程序路径发生改变，注册表保存了原有的路径。</p>
-</li>
-<li>
-<p>解决
-删除注册表</p>
-</li>
-</ul>
-<pre><code class="language-bash">HKEY_CURRENT_USER\Software\Classes\Applications\jd-gui.exe
+              <!-- more -->
+<h3 id="1-源码获取">1. 源码获取</h3>
+<pre><code class="language-bash">git clone https://code.qt.io/qt/qt5.git
+cd qt5
+perl init-repository
 </code></pre>
-<hr>
-<h2 id="应用类">应用类</h2>
-<hr>
+<h3 id="2-环境准备">2. 环境准备</h3>
+<pre><code class="language-bash"># msvc
+call &quot;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Auxiliary\Build\vcvars32.bat&quot;
+
+# openssl 支持
+set INCLUDE=%INCLUDE%;E:\WorkSpace\4-Interface\standard\openssl\swssl_1.1.1pre8\sansec\Product\swssl-win32-10005\include
+
+# 修改  QT\Qt5.3.2\5.3\Src\qtbase\mkspecs\win32-msvc2013\qmake.conf
+
+DEFINES                += UNICODE WIN32
+QMAKE_CFLAGS_RELEASE    = -O2 -MD
+QMAKE_CFLAGS_RELEASE_WITH_DEBUGINFO += -O2 -MD -Zi
+QMAKE_CFLAGS_DEBUG      = -Zi -MDd
+QMAKE_LFLAGS_CONSOLE    = /SUBSYSTEM:CONSOLE@QMAKE_SUBSYSTEM_SUFFIX@
+QMAKE_LFLAGS_WINDOWS    = /SUBSYSTEM:WINDOWS@QMAKE_SUBSYSTEM_SUFFIX@
+
+==&gt;
+
+DEFINES                += UNICODE WIN32 _USING_V110_SDK71_
+QMAKE_CFLAGS_RELEASE    = -O2 -MT
+QMAKE_CFLAGS_RELEASE_WITH_DEBUGINFO += -O2 -MT -Zi
+QMAKE_CFLAGS_DEBUG      = -Zi -MTd
+QMAKE_LFLAGS_CONSOLE    = /SUBSYSTEM:CONSOLE,5.01
+QMAKE_LFLAGS_WINDOWS    = /SUBSYSTEM:WINDOWS,5.01
+
+</code></pre>
+<h3 id="3-编译">3. 编译</h3>
+<pre><code class="language-bash">mkdir build
+cd build
+
+# configure
+configure -confirm-license -opensource -debug-and-release -static -no-dbus -no-opengl -no-gcc-sysroot -no-evdev -no-xcb -qt-zlib -qt-libjpeg -qt-libpng -qt-freetype -qt-pcre -qt-harfbuzz -nomake examples -nomake tests -platform win32-msvc -prefix &quot;C:\Qt\Qt5.12&quot;
+
+# make
+nmake
+nmake install
+</code></pre>
 
             </div>
             
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://badsn.com/post/win7-xiu-gai-wang-qia-mac-di-zhi">
+                <a href="https://badsn.com/post/windows-zhu-ce-biao-bi-ji">
                   <h3 class="post-title">
-                    Win7 修改网卡 MAC 地址
+                    Windows 注册表笔记
                   </h3>
                 </a>
               </div>
