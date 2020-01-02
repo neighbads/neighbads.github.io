@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://badsn.com/favicon.ico?v=1559206643444">
+<link rel="shortcut icon" href="https://badsn.com/favicon.ico?v=1577927178315">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://badsn.com/styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://badsn.com">
-        <img src="https://badsn.com/images/avatar.png?v=1559206643444" class="site-logo">
+        <img src="https://badsn.com/images/avatar.png?v=1577927178315" class="site-logo">
         <h1 class="site-title">胡言随语</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -107,8 +107,8 @@
             <div class="post-content">
               <p>TortoiseGit 和 TortoiseSVN 都安装时，右键菜单会很长，尝试将 TortoiseGit 的 Clone 菜单折叠到二级菜单中</p>
 <!--more-->
-<p>默认效果：
-<img src="https://badsn.com/post-images/1559204682888.png" alt=""></p>
+<p>默认效果：<br>
+<img src="https://badsn.com/post-images/1559204682888.png" alt="" loading="lazy"></p>
 <p>太占空间，希望能把两个菜单折叠到一个里。</p>
 <h2 id="查找资料">查找资料</h2>
 <ul>
@@ -123,11 +123,11 @@
 <ul>
 <li>上面百度到右键菜单在注册表相关，桌面右键为例：</li>
 </ul>
-<p>普通右键菜单：
-<code>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\Background\shell</code>
-可以看到下面有 “在此处运行 CMD”
-COM组件右键菜单：
-<code>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\Background\shellex</code>
+<p>普通右键菜单：<br>
+<code>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\Background\shell</code><br>
+可以看到下面有 “在此处运行 CMD”<br>
+COM组件右键菜单：<br>
+<code>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\Background\shellex</code><br>
 可以看到下面有 TortoiseGit 和 TortoiseSVN 和其他的（新建，分享，小工具）。</p>
 <ul>
 <li>实验解决办法 一（未成功）</li>
@@ -136,24 +136,24 @@ COM组件右键菜单：
 <ul>
 <li>实验解决办法 二 （成功）</li>
 </ul>
-<p>突然想到 这个是开源项目啊，还有一个修改代码实现的方法，查看 TortoiseGit 右键菜单的 CLSID :
-<code>{10A0FDD2-B0C0-4CD4-A7AE-E594CE3B91C8}</code>
-可以看到注册的 dll 文件：
+<p>突然想到 这个是开源项目啊，还有一个修改代码实现的方法，查看 TortoiseGit 右键菜单的 CLSID :<br>
+<code>{10A0FDD2-B0C0-4CD4-A7AE-E594CE3B91C8}</code><br>
+可以看到注册的 dll 文件：<br>
 <code>TortoiseGitStub.dll</code></p>
 <h2 id="tortoisegit-源码编译">TortoiseGit 源码编译</h2>
 <ul>
 <li>TortoiseGit 的源码在 gitlab, clone 下来</li>
 </ul>
 <p><code>git clone https://gitlab.com/tortoisegit/tortoisegit.git</code></p>
-<p>克隆的有点慢，可以设置下代理 :wink:：</p>
+<p>克隆的有点慢，可以设置下代理 😉：</p>
 <pre><code class="language-shell">git config --global http.proxy &quot;10.0.1.1:1080&quot;
 git config --global https.proxy &quot;10.0.1.1:1080&quot;
 </code></pre>
 <ul>
 <li>我现在用的是官网最新稳定版 2.5</li>
 </ul>
-<p>看下tag，切换到 2.5
-<code>git checkout REL_2.5.0.0_EXTERNAL</code>
+<p>看下tag，切换到 2.5<br>
+<code>git checkout REL_2.5.0.0_EXTERNAL</code><br>
 查看 build.txt，依次 加载子模块，补丁。</p>
 <pre><code class="language-shell">git submodule update --init
 cd ext/libgit2
@@ -184,7 +184,7 @@ InsertGitMenu(	bIsTop,
 <p>替换和删除会不允许，但是可以重命名。放入新的之后重启资源管理器</p>
 <p><code>taskkill /f /im explorer.exe &amp;&amp; start explorer</code></p>
 <h2 id="最后效果">最后效果：</h2>
-<p><img src="https://badsn.com/post-images/1559204726316.png" alt=""></p>
+<figure data-type="image" tabindex="1"><img src="https://badsn.com/post-images/1559204726316.png" alt="" loading="lazy"></figure>
 <h2 id="下载地址">下载地址</h2>
 <p><a href="http://p.ucc.vc/1.%E5%BF%85%E5%A4%87%E5%B7%A5%E5%85%B7/TortoiseGit/TortoiseGit.zip">TortoiseGit.zip</a></p>
 <hr>
