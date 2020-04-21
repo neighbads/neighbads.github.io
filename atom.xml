@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://badsn.com</id>
     <title>胡言随语</title>
-    <updated>2020-01-02T01:06:25.617Z</updated>
+    <updated>2020-04-21T03:51:25.321Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://badsn.com"/>
     <link rel="self" href="https://badsn.com/atom.xml"/>
@@ -11,15 +11,15 @@
     <rights>All rights reserved 2020, 胡言随语</rights>
     <entry>
         <title type="html"><![CDATA[Qt5.12 git 源码编译]]></title>
-        <id>https://badsn.com/post/qt512-git-yuan-ma-bian-yi</id>
-        <link href="https://badsn.com/post/qt512-git-yuan-ma-bian-yi">
+        <id>https://badsn.com/post/qt512-git-yuan-ma-bian-yi/</id>
+        <link href="https://badsn.com/post/qt512-git-yuan-ma-bian-yi/">
         </link>
         <updated>2019-05-30T08:40:09.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Windows 注册表笔记]]></title>
-        <id>https://badsn.com/post/windows-zhu-ce-biao-bi-ji</id>
-        <link href="https://badsn.com/post/windows-zhu-ce-biao-bi-ji">
+        <id>https://badsn.com/post/windows-zhu-ce-biao-bi-ji/</id>
+        <link href="https://badsn.com/post/windows-zhu-ce-biao-bi-ji/">
         </link>
         <updated>2019-05-30T08:32:45.000Z</updated>
         <summary type="html"><![CDATA[<p>记录遇到使用过的 Windows 注册表相关</p>
@@ -29,8 +29,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Win7 修改网卡 MAC 地址]]></title>
-        <id>https://badsn.com/post/win7-xiu-gai-wang-qia-mac-di-zhi</id>
-        <link href="https://badsn.com/post/win7-xiu-gai-wang-qia-mac-di-zhi">
+        <id>https://badsn.com/post/win7-xiu-gai-wang-qia-mac-di-zhi/</id>
+        <link href="https://badsn.com/post/win7-xiu-gai-wang-qia-mac-di-zhi/">
         </link>
         <updated>2019-05-30T08:29:57.000Z</updated>
         <summary type="html"><![CDATA[<p>Win7 下修改网卡的 Mac 地址</p>
@@ -40,8 +40,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[TortoiseGit 右键菜单 全部折叠到二级菜单中]]></title>
-        <id>https://badsn.com/post/tortoisegit-you-jian-cai-dan-quan-bu-zhe-die-dao-er-ji-cai-dan-zhong</id>
-        <link href="https://badsn.com/post/tortoisegit-you-jian-cai-dan-quan-bu-zhe-die-dao-er-ji-cai-dan-zhong">
+        <id>https://badsn.com/post/tortoisegit-you-jian-cai-dan-quan-bu-zhe-die-dao-er-ji-cai-dan-zhong/</id>
+        <link href="https://badsn.com/post/tortoisegit-you-jian-cai-dan-quan-bu-zhe-die-dao-er-ji-cai-dan-zhong/">
         </link>
         <updated>2019-05-30T08:21:39.000Z</updated>
         <summary type="html"><![CDATA[<p>TortoiseGit 和 TortoiseSVN 都安装时，右键菜单会很长，尝试将 TortoiseGit 的 Clone 菜单折叠到二级菜单中</p>
@@ -51,8 +51,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[IDEA 使用笔记]]></title>
-        <id>https://badsn.com/post/ji-lu-idea-shi-yong-zhong-yu-dao-de-wen-ti</id>
-        <link href="https://badsn.com/post/ji-lu-idea-shi-yong-zhong-yu-dao-de-wen-ti">
+        <id>https://badsn.com/post/ji-lu-idea-shi-yong-zhong-yu-dao-de-wen-ti/</id>
+        <link href="https://badsn.com/post/ji-lu-idea-shi-yong-zhong-yu-dao-de-wen-ti/">
         </link>
         <updated>2019-05-30T08:18:47.000Z</updated>
         <summary type="html"><![CDATA[<p>以 “问题 -- 原因 -- 解决”的方式记录 IDEA 的使用笔记</p>
@@ -62,8 +62,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[IDEA 创建 Struts2 简单工程]]></title>
-        <id>https://badsn.com/post/idea-chuang-jian-struts2-jian-dan-gong-cheng</id>
-        <link href="https://badsn.com/post/idea-chuang-jian-struts2-jian-dan-gong-cheng">
+        <id>https://badsn.com/post/idea-chuang-jian-struts2-jian-dan-gong-cheng/</id>
+        <link href="https://badsn.com/post/idea-chuang-jian-struts2-jian-dan-gong-cheng/">
         </link>
         <updated>2019-05-30T08:12:25.000Z</updated>
         <summary type="html"><![CDATA[<p>IDEA 和 Struts2 参考其他资料的 HelloWorld</p>
@@ -73,8 +73,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[VisualGDB 5.2 子进程调试 遇到的问题]]></title>
-        <id>https://badsn.com/post/visualgdb-52-zi-jin-cheng-diao-shi-yu-dao-de-wen-ti</id>
-        <link href="https://badsn.com/post/visualgdb-52-zi-jin-cheng-diao-shi-yu-dao-de-wen-ti">
+        <id>https://badsn.com/post/visualgdb-52-zi-jin-cheng-diao-shi-yu-dao-de-wen-ti/</id>
+        <link href="https://badsn.com/post/visualgdb-52-zi-jin-cheng-diao-shi-yu-dao-de-wen-ti/">
         </link>
         <updated>2019-05-30T07:59:26.000Z</updated>
         <summary type="html"><![CDATA[<p>VisualGDB 是 Visual Studio 的一个插件，用于在 Windows 下开发 Linux 程序，记录 VisualGDB 调试 Linux 子进程方法</p>
@@ -84,8 +84,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://badsn.com/post/hello-gridea</id>
-        <link href="https://badsn.com/post/hello-gridea">
+        <id>https://badsn.com/post/hello-gridea/</id>
+        <link href="https://badsn.com/post/hello-gridea/">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
