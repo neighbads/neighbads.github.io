@@ -118,7 +118,6 @@ body {
   line-height: 2;
   width: 100%;
   overflow-x: hidden;
-  user-select: none;
 }
 sub,
 sup {
@@ -175,6 +174,9 @@ blockquote {
 .light-box img {
   width: 0;
   transition: width 1000ms ease-in-out 0s;
+}
+.post-body {
+  overflow: hidden;
 }
 .post-body img {
   cursor: zoom-in;
@@ -2189,8 +2191,8 @@ pre > span.copy-code:hover {
     .brand {
       background: #222222cc;
     }
-    .main-title {
-      color: #222;
+    .main-title, .brand {
+      color: #222 !important;
     }
     .mist .site-title i {
       background: #222222cc;
