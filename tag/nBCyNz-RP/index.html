@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="keywords" content="Coder | 个人博客 | Gridea | Neighbads">
+<meta name="description" content="">
+<meta name="theme-color" content="#222">
+<title>胡言随语</title>
+<link rel="shortcut icon" href="/favicon.ico?v=1691043788618">
+<link rel="stylesheet" href="/media/css/gemini.css">
+<link rel="stylesheet" href="/media/fonts/font-awesome.css">
+<link
+  href="//fonts.loli.net/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+  rel="stylesheet" type="text/css">
+
+<link href="/media/hljs/styles/an-old-hope.css"
+  rel="stylesheet">
+
+<link rel="stylesheet" href="/styles/main.css">
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script src="/media/js/jquery.js"></script>
+<script src="/media/hljs/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
+
+
+
+
+
+
+</head>
+
+<body>
+  <div class="head-top-line"></div>
+  <div class="header-box">
+    
+<div class="gemini">
+  <header class="header  ">
+    <div class="blog-header box-shadow-wrapper bg-color " id="header">
+      <div class="nav-toggle" id="nav_toggle">
+        <div class="toggle-box">
+          <div class="line line-top"></div>
+          <div class="line line-center"></div>
+          <div class="line line-bottom"></div>
+        </div>
+      </div>
+      <div class="site-meta">       
+        <div class="site-title">
+          
+            <a href="/" class="brand">
+              <span>胡言随语</span>
+            </a>  
+          
+        </div>
+        
+          <p class="subtitle">精于心，简于形</p>
+        
+      </div>
+      <nav class="site-nav" id="site_nav">
+        <ul id="nav_ul">
+          
+            
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/" target="_self">
+                  首页
+                </a>
+              
+            </li>
+          
+            
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/archives" target="_self">
+                  归档
+                </a>
+              
+            </li>
+          
+            
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/tags" target="_self">
+                  标签
+                </a>
+              
+            </li>
+          
+            
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/post/about" target="_self">
+                  关于
+                </a>
+              
+            </li>
+          
+          
+          
+            <li id="fa_search" class="nav-item">
+              <a href="javascript:void(0);">
+                <i class="fa fa-search"></i> <span class="language" data-lan="search">搜索</span>
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>
+
+<script type="text/javascript"> 
+ 
+  let showNav = true;
+
+  let navToggle = document.querySelector('#nav_toggle'),
+  siteNav = document.querySelector('#site_nav');
+  
+  function navClick() {
+    let sideBar = document.querySelector('.sidebar');
+    let navUl = document.querySelector('#nav_ul');
+    navToggle.classList.toggle('nav-toggle-active');
+    siteNav.classList.toggle('nav-menu-active');
+    if (siteNav.classList.contains('nav-menu-active')) {
+      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
+    } else {
+      siteNav.style = "";
+    }
+  }
+
+  navToggle.addEventListener('click',navClick);  
+</script>
+  </div>
+  <div class="main-continer">
+    
+    <div
+      class="section-layout  gemini">
+      <div class="section-layout-wrapper">
+        <div id="sidebarMeta" class="sidebar">
+    
+<div class="sidebar-wrapper box-shadow-wrapper bg-color">
+  <div class="sidebar-item">
+    <img class="site-author-image right-motion" src="/images/avatar.png"/>
+    <p class="site-author-name">neighbads</p>
+    
+  </div>
+  <div class="sidebar-item side-item-stat right-motion">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
+        
+        <span class="site-item-stat-count">8</span>
+        <span class="site-item-stat-name language" data-lan="article">文章</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">15</span>
+        <span class="site-item-stat-name language" data-lan="tag">标签</span>
+      </a>
+    </div>
+  </div>
+  
+    
+      <div class="sidebar-item">
+        <span class="site-item-rss">
+            <i class="fa fa-rss"></i>
+            <a href="https://badsn.com/atom.xml" target="_blank">RSS</a>
+        </span>
+      </div>
+    
+  
+  
+    <div class="sidebar-item sidebar-item-social">
+      <div class="social-item">
+        
+          
+            <a href="https://github.com/neighbads">
+              <i class="fa fa-github-alt" title="Github"></i>
+            </a>
+          
+        
+        
+      </div>
+    </div>
+  
+
+
+
+</div>
+</div>
+<script>
+  let sidebarMeta = document.querySelector('#sidebarMeta');
+  let scheme = 'gemini';
+  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
+  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
+    document.addEventListener('scroll', function(e) {
+      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
+        sidebarWrapper.classList.add('home-sidebar-fixed')
+      } else {
+        sidebarWrapper.classList.remove('home-sidebar-fixed')
+      }
+    });
+  }
+  </script>
+        <div class="section-box tag-line box-shadow-wrapper">
+          <section class="section tags-section posts-expand bg-color">
+            <div class="padding-wrapper">
+  <div class="tag-timeline-box">
+    <div class="tag-timeline-wrapper">
+      <div class="tag-timeline-title">
+        <h2>
+          Windows
+          <small class="language" data-lan="tag">标签</small>
+        </h2>
+      </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <a href="https://badsn.com/post/windows-zhu-ce-biao-bi-ji/">
+        <div class="motion-warpper">
+          <div class="tag-post-node">
+            <h1>
+              05-30
+              <small>Windows 注册表笔记</small>
+            </h1>
+          </div>
+        </div>
+      </a>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <a href="https://badsn.com/post/win7-xiu-gai-wang-qia-mac-di-zhi/">
+        <div class="motion-warpper">
+          <div class="tag-post-node">
+            <h1>
+              05-30
+              <small>Win7 修改网卡 MAC 地址</small>
+            </h1>
+          </div>
+        </div>
+      </a>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <a href="https://badsn.com/post/tortoisegit-you-jian-cai-dan-quan-bu-zhe-die-dao-er-ji-cai-dan-zhong/">
+        <div class="motion-warpper">
+          <div class="tag-post-node">
+            <h1>
+              05-30
+              <small>TortoiseGit 右键菜单 全部折叠到二级菜单中</small>
+            </h1>
+          </div>
+        </div>
+      </a>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <a href="https://badsn.com/post/ji-lu-idea-shi-yong-zhong-yu-dao-de-wen-ti/">
+        <div class="motion-warpper">
+          <div class="tag-post-node">
+            <h1>
+              05-30
+              <small>IDEA 使用笔记</small>
+            </h1>
+          </div>
+        </div>
+      </a>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <a href="https://badsn.com/post/idea-chuang-jian-struts2-jian-dan-gong-cheng/">
+        <div class="motion-warpper">
+          <div class="tag-post-node">
+            <h1>
+              05-30
+              <small>IDEA 创建 Struts2 简单工程</small>
+            </h1>
+          </div>
+        </div>
+      </a>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <a href="https://badsn.com/post/visualgdb-52-zi-jin-cheng-diao-shi-yu-dao-de-wen-ti/">
+        <div class="motion-warpper">
+          <div class="tag-post-node">
+            <h1>
+              05-30
+              <small>VisualGDB 5.2 子进程调试 遇到的问题</small>
+            </h1>
+          </div>
+        </div>
+      </a>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </div>
+  </div>
+</div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="footer-box">
+  <footer class="footer">
+    <center id="runTimeBox">
+      已运行:<span id="run_time"></span>
+    </center>
+    <span id="busuanzi_container_site_pv">浏览数:<span id="busuanzi_value_site_pv"></span> 次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">访客数:<span id="busuanzi_value_site_uv"></span> 人</span>
+
+    <script>
+      BirthDay = new Date('');
+      if (BirthDay.getTime()) {
+        function runTime() {
+          str = "";
+          today = new Date();
+          timeold = today.getTime() - BirthDay.getTime();
+          msPerDay = 24 * 60 * 60 * 1000;
+          e_daysold = timeold / msPerDay;
+          daysold = Math.floor(e_daysold);
+          str += daysold + "天";
+          return str;
+        }
+        setInterval(function () {
+          $("#run_time").html(runTime());
+        }, 1000);
+      } else {
+        document.querySelector('.footer').removeChild(document.querySelector('#runTimeBox'));
+      }
+    </script>
+    <div class="poweredby">
+      <a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备19052599号-1</a>
+    </div>
+  </footer>
+  
+    
+        <div class="gemini back-to-top" id="back_to_top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span class="scrollpercent"> <span id="back_to_top_text">0</span>% </span>
+            
+        </div>
+        
+          
+            
+              <div class="bg-img">
+                <img src="https://i.v2ex.co/04krZ1yc.png" />
+              </div>
+              
+                
+                  
+                        
+</div>
+<script>
+  let sideBarOpen = "sidebar-open";
+  let body = document.body;
+  let back2Top = document.querySelector("#back_to_top"),
+    back2TopText = document.querySelector("#back_to_top_text"),
+    drawerBox = document.querySelector("#drawer_box"),
+    rightSideBar = document.querySelector(".sidebar"),
+    viewport = document.querySelector("body");
+
+  function scrollAnimation(currentY, targetY) {
+    let needScrollTop = targetY - currentY;
+    let _currentY = currentY;
+    setTimeout(() => {
+      const dist = Math.ceil(needScrollTop / 10);
+      _currentY += dist;
+      window.scrollTo(_currentY, currentY);
+      if (needScrollTop > 10 || needScrollTop < -10) {
+        scrollAnimation(_currentY, targetY);
+      } else {
+        window.scrollTo(_currentY, targetY);
+      }
+    }, 1);
+  }
+
+  back2Top.addEventListener("click", function (e) {
+    scrollAnimation(document.scrollingElement.scrollTop, 0);
+    e.stopPropagation();
+    return false;
+  });
+
+  window.addEventListener("scroll", function (e) {
+    let percent =
+      (document.scrollingElement.scrollTop /
+        (document.scrollingElement.scrollHeight -
+          document.scrollingElement.clientHeight)) *
+      100;
+    if (percent > 1 && !back2Top.classList.contains("back-top-active")) {
+      back2Top.classList.add("back-top-active");
+    }
+    if (percent == 0) {
+      back2Top.classList.remove("back-top-active");
+    }
+    if (back2TopText) {
+      back2TopText.textContent = Math.floor(percent);
+    }
+  });
+
+  let hasCacu = false;
+  window.addEventListener("resize", function (e) {
+    calcuHeight();
+  });
+
+  function calcuHeight() {
+    // 动态调整站点概览高度
+    if (
+      (!hasCacu && back2Top.classList.contains("pisces")) ||
+      back2Top.classList.contains("gemini")
+    ) {
+      let sideBar = document.querySelector(".sidebar");
+      let navUl = document.querySelector("#site_nav");
+      sideBar.style =
+        "margin-top:" + (navUl.offsetHeight + navUl.offsetTop + 15) + "px;";
+      hasCacu = true;
+    }
+  }
+  calcuHeight();
+
+  let open = false,
+    MOTION_TIME = 300,
+    RIGHT_MOVE_DIS = "320px";
+
+  if (drawerBox) {
+    let rightMotions = document.querySelectorAll(".right-motion");
+    let right = drawerBox.classList.contains("right");
+
+    let transitionDir = right
+      ? "transition.slideRightIn"
+      : "transition.slideLeftIn";
+
+    let openProp, closeProp;
+    if (right) {
+      openProp = {
+        paddingRight: RIGHT_MOVE_DIS,
+      };
+      closeProp = {
+        paddingRight: "0px",
+      };
+    } else {
+      openProp = {
+        paddingLeft: RIGHT_MOVE_DIS,
+      };
+      closeProp = {
+        paddingLeft: "0px",
+      };
+    }
+
+    drawerBox.onclick = function () {
+      open = !open;
+      jQuery.Velocity(rightSideBar, "stop");
+      jQuery.Velocity(viewport, "stop");
+      jQuery.Velocity(rightMotions, "stop");
+      if (open) {
+        jQuery.Velocity(
+          rightSideBar,
+          {
+            width: RIGHT_MOVE_DIS,
+          },
+          {
+            duration: MOTION_TIME,
+            begin: function () {
+              jQuery.Velocity(rightMotions, transitionDir, {});
+            },
+          }
+        );
+        jQuery.Velocity(viewport, openProp, {
+          duration: MOTION_TIME,
+        });
+      } else {
+        jQuery.Velocity(
+          rightSideBar,
+          {
+            width: "0px",
+          },
+          {
+            duration: MOTION_TIME,
+            begin: function () {
+              jQuery.Velocity(rightMotions, {
+                opacity: 0,
+              });
+            },
+          }
+        );
+        jQuery.Velocity(viewport, closeProp, {
+          duration: MOTION_TIME,
+        });
+      }
+      for (let i = 0; i < drawerBox.children.length; i++) {
+        drawerBox.children[i].classList.toggle("muse-line");
+      }
+      drawerBox.classList.toggle(sideBarOpen);
+    };
+  }
+
+  // 链接跳转
+  let newWindow = "false";
+  if (newWindow === "true") {
+    let links = document.querySelectorAll(".post-body a");
+    links.forEach((item) => {
+      if (!item.classList.contains("btn")) {
+        item.setAttribute("target", "_blank");
+      }
+    });
+  }
+
+  let faSearch = document.querySelector("#fa_search");
+  faSearch &&
+    faSearch.addEventListener("click", function () {
+      document.querySelector("#search_mask").style = "";
+    });
+
+  // 代码高亮
+  hljs.initHighlightingOnLoad();
+
+  // 离开当前页title变化
+  var leaveTitle = "";
+  var normal_title = document.title;
+  if (leaveTitle) {
+    document.addEventListener("visibilitychange", function () {
+      if (document.visibilityState == "hidden") {
+        normal_title = document.title;
+        document.title = leaveTitle;
+      } else {
+        document.title = normal_title;
+      }
+    });
+  }
+</script>
+
+<link rel="stylesheet" href="/media/css/jquery.fancybox.css" />
+<script src="/media/js/jquery.fancybox.js"></script>
+
+<script>
+  let images = document.querySelectorAll(".section img");
+  images.forEach((image) => {
+    var parent = image.parentElement;
+    var next = image.nextElementSibling;
+    parent.removeChild(image);
+    var aelem = document.createElement("a");
+    aelem.href = image.src;
+    aelem.dataset["fancybox"] = "images";
+    aelem.dataset["rel"] = "fancybox-button";
+    aelem.classList.add("fancybox");
+    aelem.appendChild(image);
+    parent.insertBefore(aelem, next);
+  });
+</script>
+  </div>
+</body>
+
+  <div class="search-mask" id="search_mask" style="display: none;">
+  <div class="search-box">
+    <div class="search-title">
+      <i class="fa fa-search"></i>
+      <div class="input-box">
+        <input id="search" type="text" class="language" data-lan="search" placeholder="搜索">
+      </div>
+      <i id="close" class="fa fa-times-circle"></i>
+    </div>
+    <div class="stat-box">
+      <span id="stat_count">0</span><span class="language" data-lan="stat">条相关条目，使用了</span><span id="stat_times">0</span><span class="language" data-lan="stat-time">毫秒</span>
+      <hr>
+    </div>
+    <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://badsn.com/post/qt512-git-yuan-ma-bian-yi/"" data-c="
+          &lt;!-- more --&gt;
+&lt;h3 id=&#34;1-源码获取&#34;&gt;1. 源码获取&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git clone https://code.qt.io/qt/qt5.git
+cd qt5
+perl init-repository
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;2-环境准备&#34;&gt;2. 环境准备&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# msvc
+call &amp;quot;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Auxiliary\Build\vcvars32.bat&amp;quot;
+
+# openssl 支持
+set INCLUDE=%INCLUDE%;E:\WorkSpace\4-Interface\standard\openssl\swssl_1.1.1pre8\sansec\Product\swssl-win32-10005\include
+
+# 修改  QT\Qt5.3.2\5.3\Src\qtbase\mkspecs\win32-msvc2013\qmake.conf
+
+DEFINES                += UNICODE WIN32
+QMAKE_CFLAGS_RELEASE    = -O2 -MD
+QMAKE_CFLAGS_RELEASE_WITH_DEBUGINFO += -O2 -MD -Zi
+QMAKE_CFLAGS_DEBUG      = -Zi -MDd
+QMAKE_LFLAGS_CONSOLE    = /SUBSYSTEM:CONSOLE@QMAKE_SUBSYSTEM_SUFFIX@
+QMAKE_LFLAGS_WINDOWS    = /SUBSYSTEM:WINDOWS@QMAKE_SUBSYSTEM_SUFFIX@
+
+==&amp;gt;
+
+DEFINES                += UNICODE WIN32 _USING_V110_SDK71_
+QMAKE_CFLAGS_RELEASE    = -O2 -MT
+QMAKE_CFLAGS_RELEASE_WITH_DEBUGINFO += -O2 -MT -Zi
+QMAKE_CFLAGS_DEBUG      = -Zi -MTd
+QMAKE_LFLAGS_CONSOLE    = /SUBSYSTEM:CONSOLE,5.01
+QMAKE_LFLAGS_WINDOWS    = /SUBSYSTEM:WINDOWS,5.01
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;3-编译&#34;&gt;3. 编译&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir build
+cd build
+
+# configure
+configure -confirm-license -opensource -debug-and-release -static -no-dbus -no-opengl -no-gcc-sysroot -no-evdev -no-xcb -qt-zlib -qt-libjpeg -qt-libpng -qt-freetype -qt-pcre -qt-harfbuzz -nomake examples -nomake tests -platform win32-msvc -prefix &amp;quot;C:\Qt\Qt5.12&amp;quot;
+
+# make
+nmake
+nmake install
+&lt;/code&gt;&lt;/pre&gt;
+">Qt5.12 git 源码编译</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://badsn.com/post/windows-zhu-ce-biao-bi-ji/"" data-c="
+          &lt;p&gt;记录遇到使用过的 Windows 注册表相关&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;h2 id=&#34;问题类&#34;&gt;问题类&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;描述&lt;br&gt;
+某个软件，不能选择应用为默认打开程序。例如 &lt;code&gt;.jar&lt;/code&gt; 文件，默认使用 &lt;code&gt;jd-gui.exe&lt;/code&gt; 打开。选择默认程序窗口中，浏览 &lt;code&gt;jd-gui.exe&lt;/code&gt; 并没有在列表中出现。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;原因&lt;br&gt;
+原有使用 &lt;code&gt;jd-gui.exe&lt;/code&gt; 打开，但程序路径发生改变，注册表保存了原有的路径。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;解决&lt;br&gt;
+删除注册表&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;HKEY_CURRENT_USER\Software\Classes\Applications\jd-gui.exe
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;应用类&#34;&gt;应用类&lt;/h2&gt;
+&lt;hr&gt;
+">Windows 注册表笔记</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://badsn.com/post/win7-xiu-gai-wang-qia-mac-di-zhi/"" data-c="
+          &lt;p&gt;Win7 下修改网卡的 Mac 地址&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;p&gt;##操作步骤&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;查看网卡的驱动关键字&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;用你熟悉的方式打开是配置设置，然后点击属性：&lt;br&gt;
+&lt;img src=&#34;https://badsn.com/post-images/1559205048893.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;然后点击配置，在详细信息里找到 “驱动程序关键字”：&lt;br&gt;
+&lt;img src=&#34;https://badsn.com/post-images/1559205054562.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;记录：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{4d36e972-e325-11ce-bfc1-08002be10318}\0012&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;打开注册表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;注册表位置是：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;后面添加上一步记录的 CLSID 得到：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0012&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;打开注册表，可以看到一些信息，确认是当前网卡注册表。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;修改或添加注册表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;打开上面目录下的&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;*\Ndi\Params\NetworkAddress&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;查看到内容：&lt;br&gt;
+&lt;img src=&#34;https://badsn.com/post-images/1559205062009.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;可以看到 “ParamDesc” 的描述是 “本地管理地址”，继续第一步，打开高级选项卡，找到 “本地管理地址”选项，填写地址即可：&lt;br&gt;
+&lt;img src=&#34;https://badsn.com/post-images/1559205067084.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;然后查看 MAC 地址已经被修改了。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;未找到注册表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果未找到 “NetworkAddress” 注册表，可以手动添加，注册表内容如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4D36E972-E325-11CE-BFC1-08002BE10318}\0012\Ndi\Params\NetworkAddress]
+&amp;quot;ParamDesc&amp;quot;=&amp;quot;本地管理地址&amp;quot;
+&amp;quot;Default&amp;quot;=&amp;quot;&amp;quot;
+&amp;quot;type&amp;quot;=&amp;quot;edit&amp;quot;
+&amp;quot;LimitText&amp;quot;=&amp;quot;12&amp;quot;
+&amp;quot;UpperCase&amp;quot;=&amp;quot;1&amp;quot;
+&amp;quot;optional&amp;quot;=&amp;quot;1&amp;quot;
+
+&lt;/code&gt;&lt;/pre&gt;
+">Win7 修改网卡 MAC 地址</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://badsn.com/post/tortoisegit-you-jian-cai-dan-quan-bu-zhe-die-dao-er-ji-cai-dan-zhong/"" data-c="
+          &lt;p&gt;TortoiseGit 和 TortoiseSVN 都安装时，右键菜单会很长，尝试将 TortoiseGit 的 Clone 菜单折叠到二级菜单中&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;p&gt;默认效果：&lt;br&gt;
+&lt;img src=&#34;https://badsn.com/post-images/1559204682888.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;太占空间，希望能把两个菜单折叠到一个里。&lt;/p&gt;
+&lt;h2 id=&#34;查找资料&#34;&gt;查找资料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;google，百度 查找右键菜单。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;查找折叠菜单，二级菜单，均没有实现。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;解决办法&#34;&gt;解决办法&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;上面百度到右键菜单在注册表相关，桌面右键为例：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;普通右键菜单：&lt;br&gt;
+&lt;code&gt;HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\Background\shell&lt;/code&gt;&lt;br&gt;
+可以看到下面有 “在此处运行 CMD”&lt;br&gt;
+COM组件右键菜单：&lt;br&gt;
+&lt;code&gt;HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\Background\shellex&lt;/code&gt;&lt;br&gt;
+可以看到下面有 TortoiseGit 和 TortoiseSVN 和其他的（新建，分享，小工具）。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;实验解决办法 一（未成功）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在 shell 下创建子菜单，将 COM 组件的菜单移到里面。失败。。。。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;实验解决办法 二 （成功）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;突然想到 这个是开源项目啊，还有一个修改代码实现的方法，查看 TortoiseGit 右键菜单的 CLSID :&lt;br&gt;
+&lt;code&gt;{10A0FDD2-B0C0-4CD4-A7AE-E594CE3B91C8}&lt;/code&gt;&lt;br&gt;
+可以看到注册的 dll 文件：&lt;br&gt;
+&lt;code&gt;TortoiseGitStub.dll&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;tortoisegit-源码编译&#34;&gt;TortoiseGit 源码编译&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;TortoiseGit 的源码在 gitlab, clone 下来&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;git clone https://gitlab.com/tortoisegit/tortoisegit.git&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;克隆的有点慢，可以设置下代理 😉：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;git config --global http.proxy &amp;quot;10.0.1.1:1080&amp;quot;
+git config --global https.proxy &amp;quot;10.0.1.1:1080&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;我现在用的是官网最新稳定版 2.5&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;看下tag，切换到 2.5&lt;br&gt;
+&lt;code&gt;git checkout REL_2.5.0.0_EXTERNAL&lt;/code&gt;&lt;br&gt;
+查看 build.txt，依次 加载子模块，补丁。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;git submodule update --init
+cd ext/libgit2
+for %%G in (..\libgit2-*.patch) do ( type %%G | git am --3way )
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;编译工程 TortoiseShell 完成得到 TortoiseGit.dll，后面浏览代码发现菜单添加在这里面。&lt;/p&gt;
+&lt;h2 id=&#34;修改代码&#34;&gt;修改代码&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;工程 TortoiseShell 中 ContextMenu.cpp：1047&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C++&#34;&gt;bIsTop = ((topmenu &amp;amp; menuInfo[menuIndex].menuID) != 0);
+//bIsTop = false;
+// insert the menu entry
+InsertGitMenu(	bIsTop,
+	bIsTop ? hMenu : subMenu,
+	bIsTop ? indexMenu++ : indexSubMenu++,
+	idCmd++,
+	menuInfo[menuIndex].menuTextID,
+	bShowIcons ? menuInfo[menuIndex].iconID : 0,
+	idCmdFirst,
+	menuInfo[menuIndex].command,
+	uFlags);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;简单的修改了 bIsTop，导致问是 最前面不会添加 &amp;quot;Git &amp;quot;，影响不大。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;编译出 TortoiseGit.dll&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;替换和删除会不允许，但是可以重命名。放入新的之后重启资源管理器&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;taskkill /f /im explorer.exe &amp;amp;&amp;amp; start explorer&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;最后效果&#34;&gt;最后效果：&lt;/h2&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://badsn.com/post-images/1559204726316.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;下载地址&#34;&gt;下载地址&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;http://p.ucc.vc/1.%E5%BF%85%E5%A4%87%E5%B7%A5%E5%85%B7/TortoiseGit/TortoiseGit.zip&#34;&gt;TortoiseGit.zip&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;TortoiseSVN 的后面有时间再看看。。。&lt;/p&gt;
+">TortoiseGit 右键菜单 全部折叠到二级菜单中</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://badsn.com/post/ji-lu-idea-shi-yong-zhong-yu-dao-de-wen-ti/"" data-c="
+          &lt;p&gt;以 “问题 -- 原因 -- 解决”的方式记录 IDEA 的使用笔记&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;h4 id=&#34;1-tools-generate-javadoc-出现错误&#34;&gt;1. Tools -&amp;gt; Generate JavaDoc 出现错误&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;错误: 编码GBK的不可映射字符&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在下面【Other command line arguments】中添加：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;-encoding utf-8 -charset utf-8
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+">IDEA 使用笔记</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://badsn.com/post/idea-chuang-jian-struts2-jian-dan-gong-cheng/"" data-c="
+          &lt;p&gt;IDEA 和 Struts2 参考其他资料的 HelloWorld&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;h3 id=&#34;基本环境&#34;&gt;基本环境&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;JAVA 配置&lt;/li&gt;
+&lt;li&gt;Tomcat 配置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;工程创建&#34;&gt;工程创建&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;下载 Struts 2&lt;/li&gt;
+&lt;li&gt;创建 Hello World 工程&lt;/li&gt;
+&lt;li&gt;修复 Project Setting&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;测试源码&#34;&gt;测试源码&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;添加测试源码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;基本环境-2&#34;&gt;基本环境&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;已经熟悉如何配置则跳过基本环境配置。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;工程默认-java-设置&#34;&gt;工程默认 JAVA 设置&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;选择设置 File -&amp;gt; Other Settings -&amp;gt; Default Project Structure...&lt;br&gt;
+&lt;img src=&#34;https://badsn.com/post-images/1559204110304.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Project Settings -&amp;gt; Project&lt;br&gt;
+&lt;img src=&#34;https://badsn.com/post-images/1559204120489.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;添加 JAVA 目录后完成设置&lt;br&gt;
+&lt;img src=&#34;https://badsn.com/post-images/1559204126983.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;tomcat-配置&#34;&gt;Tomcat 配置&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;选择设置 File -&amp;gt; Other Settings...&lt;br&gt;
+&lt;img src=&#34;https://badsn.com/post-images/1559204140398.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Build, Execution, Deployment -&amp;gt; Application Servers&lt;br&gt;
+&lt;img src=&#34;https://badsn.com/post-images/1559204146703.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;点击 + 号, 选择 Tomcat Server&lt;br&gt;
+&lt;img src=&#34;https://badsn.com/post-images/1559204156872.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;选择本地 Tomcat 目录后添加完成。&lt;/p&gt;
+&lt;h2 id=&#34;工程创建-2&#34;&gt;工程创建&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;首先到官网下载 Struts2 依赖&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;http://mirrors.tuna.tsinghua.edu.cn/apache/struts/2.3.34/struts-2.3.34-min-lib.zip&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;解压到 path_to_your_project/lib 下&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;struts_hello/lib&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;IDEA 选择 File -&amp;gt; New -&amp;gt; Project&lt;br&gt;
+&lt;img src=&#34;https://badsn.com/post-images/1559204209475.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;选择 Java Enterprise -&amp;gt; Struts 2&lt;br&gt;
+&lt;img src=&#34;https://badsn.com/post-images/1559204214949.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Library 选择上面下载的 2.3 目录&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;也可以直接使用 Download 选项的 2.5，注意 2.5 版本依赖的 log4j&lt;br&gt;
+&lt;img src=&#34;https://badsn.com/post-images/1559204222775.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;添加完成&lt;br&gt;
+&lt;img src=&#34;https://badsn.com/post-images/1559204228179.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;选择目录&lt;br&gt;
+&lt;img src=&#34;https://badsn.com/post-images/1559204233146.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;创建完成后 目录结构&lt;br&gt;
+&lt;img src=&#34;https://badsn.com/post-images/1559204237787.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;打开工程设置&lt;br&gt;
+&lt;img src=&#34;https://badsn.com/post-images/1559204242258.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Project Settings -&amp;gt; Artifacts&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;可以看到有个 Problems&lt;br&gt;
+&lt;img src=&#34;https://badsn.com/post-images/1559204247954.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;点击 Fix 按钮，选择 Add &amp;quot;Struts2&amp;quot; to the Artifacts；&lt;br&gt;
+或者&lt;br&gt;
+双击 Available Elements 窗口下的 Struts 2&lt;br&gt;
+将 Struts2 依赖添加到 部署输出目录中。&lt;br&gt;
+&lt;img src=&#34;https://badsn.com/post-images/1559204254075.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;测试源码-2&#34;&gt;测试源码&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在工程目录下添加下面文件&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;src/beans/Production.java&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package beans;
+
+public class Production {
+    private int proId;
+    private String proName;
+    private String proDesc;
+    private String proPrice;
+
+
+    public Production(int proId, String proName, String proDesc, String proPrice) {
+        this.proId = proId;
+        this.proName = proName;
+        this.proDesc = proDesc;
+        this.proPrice = proPrice;
+    }
+
+    public Production() {
+    }
+
+    @Override
+    public String toString() {
+        return &amp;quot;Production{&amp;quot; +
+                &amp;quot;proId=&amp;quot; + proId +
+                &amp;quot;, proName=&#39;&amp;quot; + proName + &#39;\&#39;&#39; +
+                &amp;quot;, proDesc=&#39;&amp;quot; + proDesc + &#39;\&#39;&#39; +
+                &amp;quot;, proPrice=&#39;&amp;quot; + proPrice + &#39;\&#39;&#39; +
+                &#39;}&#39;;
+    }
+
+    public int getProId() {
+        return proId;
+    }
+
+    public void setProId(int proId) {
+        this.proId = proId;
+    }
+
+    public String getProName() {
+        return proName;
+    }
+
+    public void setProName(String proName) {
+        this.proName = proName;
+    }
+
+    public String getProDesc() {
+        return proDesc;
+    }
+
+    public void setProDesc(String proDesc) {
+        this.proDesc = proDesc;
+    }
+
+    public String getProPrice() {
+        return proPrice;
+    }
+
+    public void setProPrice(String proPrice) {
+        this.proPrice = proPrice;
+    }
+
+    public String save() {
+
+        System.out.println(&amp;quot;result:&amp;quot; + this);
+        return &amp;quot;detail&amp;quot;;
+    }
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;web/details.jsp&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-jsp&#34;&gt;&amp;lt;%@ page contentType=&amp;quot;text/html;charset=UTF-8&amp;quot; language=&amp;quot;java&amp;quot; %&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;title&amp;gt;details&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    productID:${proId}&amp;lt;br&amp;gt;
+    productName:${proName}&amp;lt;br&amp;gt;
+    productDesc:${proDesc}&amp;lt;br&amp;gt;
+    productPrice:${proPrice}&amp;lt;br&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;web/input.jsp&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-jsp&#34;&gt;&amp;lt;%@ page contentType=&amp;quot;text/html;charset=UTF-8&amp;quot; language=&amp;quot;java&amp;quot; %&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;title&amp;gt;输入内容&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;form action=&amp;quot;product-save.action&amp;quot; method=&amp;quot;post&amp;quot;&amp;gt;
+    productName:&amp;lt;input type=&amp;quot;text&amp;quot; name=&amp;quot;proName&amp;quot;&amp;gt;&amp;lt;br&amp;gt;
+    productDesc:&amp;lt;input type=&amp;quot;text&amp;quot; name=&amp;quot;proDesc&amp;quot;&amp;gt;&amp;lt;br&amp;gt;
+    productPrice:&amp;lt;input type=&amp;quot;text&amp;quot; name=&amp;quot;proPrice&amp;quot;&amp;gt;&amp;lt;br&amp;gt;
+    &amp;lt;input type=&amp;quot;submit&amp;quot; value=&amp;quot;确定&amp;quot;&amp;gt;
+&amp;lt;/form&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;修改下面文件，具体内容如下&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;web/WEB-INF/web.xm&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+&amp;lt;web-app xmlns=&amp;quot;http://xmlns.jcp.org/xml/ns/javaee&amp;quot;
+         xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;
+         xsi:schemaLocation=&amp;quot;http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd&amp;quot;
+         version=&amp;quot;3.1&amp;quot;&amp;gt;
+    &amp;lt;filter&amp;gt;
+        &amp;lt;filter-name&amp;gt;struts2&amp;lt;/filter-name&amp;gt;
+        &amp;lt;filter-class&amp;gt;org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter&amp;lt;/filter-class&amp;gt;
+    &amp;lt;/filter&amp;gt;
+    &amp;lt;filter-mapping&amp;gt;
+        &amp;lt;filter-name&amp;gt;struts2&amp;lt;/filter-name&amp;gt;
+        &amp;lt;url-pattern&amp;gt;/*&amp;lt;/url-pattern&amp;gt;
+    &amp;lt;/filter-mapping&amp;gt;
+    &amp;lt;welcome-file-list&amp;gt;
+        &amp;lt;welcome-file&amp;gt;index.jsp&amp;lt;/welcome-file&amp;gt;
+    &amp;lt;/welcome-file-list&amp;gt;
+&amp;lt;/web-app&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;web/index.jsp&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-jsp&#34;&gt;&amp;lt;%@ page contentType=&amp;quot;text/html;charset=UTF-8&amp;quot; language=&amp;quot;java&amp;quot; %&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;title&amp;gt;输入内容&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;form action=&amp;quot;product-save.action&amp;quot; method=&amp;quot;post&amp;quot;&amp;gt;
+    productName:&amp;lt;input type=&amp;quot;text&amp;quot; name=&amp;quot;proName&amp;quot;&amp;gt;&amp;lt;br&amp;gt;
+    productDesc:&amp;lt;input type=&amp;quot;text&amp;quot; name=&amp;quot;proDesc&amp;quot;&amp;gt;&amp;lt;br&amp;gt;
+    productPrice:&amp;lt;input type=&amp;quot;text&amp;quot; name=&amp;quot;proPrice&amp;quot;&amp;gt;&amp;lt;br&amp;gt;
+    &amp;lt;input type=&amp;quot;submit&amp;quot; value=&amp;quot;确定&amp;quot;&amp;gt;
+&amp;lt;/form&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;src/struts.xml&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+
+&amp;lt;!DOCTYPE struts PUBLIC
+        &amp;quot;-//Apache Software Foundation//DTD Struts Configuration 2.3//EN&amp;quot;
+        &amp;quot;http://struts.apache.org/dtds/struts-2.3.dtd&amp;quot;&amp;gt;
+
+&amp;lt;struts&amp;gt;
+    &amp;lt;!--&amp;lt;constant name=&amp;quot;struts.devMode&amp;quot; value=&amp;quot;true&amp;quot;/&amp;gt;--&amp;gt;
+    &amp;lt;package name=&amp;quot;default&amp;quot; extends=&amp;quot;struts-default&amp;quot;&amp;gt;
+
+        &amp;lt;!--首页请求，name对应index.jsp中的action名字--&amp;gt;
+        &amp;lt;action name=&amp;quot;product-input&amp;quot;&amp;gt;
+
+            &amp;lt;!--转到input.jsp页面--&amp;gt;
+            &amp;lt;result&amp;gt;/input.jsp&amp;lt;/result&amp;gt;
+        &amp;lt;/action&amp;gt;
+
+
+        &amp;lt;!--第二个action请求，name对应input.jsp下的action名字
+        引用对象以及其方法--&amp;gt;
+        &amp;lt;action name=&amp;quot;product-save&amp;quot; class=&amp;quot;beans.Production&amp;quot; method=&amp;quot;save&amp;quot;&amp;gt;
+
+            &amp;lt;!--引用方法中返回的detai，对应name，展示到details下--&amp;gt;
+            &amp;lt;result name=&amp;quot;detail&amp;quot;&amp;gt;/details.jsp&amp;lt;/result&amp;gt;
+
+        &amp;lt;/action&amp;gt;
+
+    &amp;lt;/package&amp;gt;
+&amp;lt;/struts&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;添加完成后点击 Run&lt;br&gt;
+&lt;img src=&#34;https://badsn.com/post-images/1559204183108.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;等待 Tomcat 启动成功，自动打开浏览器：&lt;br&gt;
+&lt;img src=&#34;https://badsn.com/post-images/1559204273264.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://badsn.com/post-images/1559204278802.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://badsn.com/post-images/1559204283631.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://badsn.com/post-images/1559204293114.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;参考引用&#34;&gt;参考引用&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;http://struts.apache.org/getting-started/hello-world-using-struts2.html&#34; title=&#34;Hello World Using Struts 2&#34;&gt;Hello World Using Struts 2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cnblogs.com/share2015/p/5279605.html&#34; title=&#34;idea 配置一个struts2的简单的helloWorld&#34;&gt;idea 配置一个struts2的简单的helloWorld&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jingyan.baidu.com/article/6b97984dc9f1a31ca2b0bf24.html&#34; title=&#34;idea设置程序默认使用JDK&#34;&gt;idea设置程序默认使用JDK&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.csdn.net/dream_an/article/details/49020211&#34; title=&#34;intellij IDEA配置tomcat&#34;&gt;intellij IDEA配置tomcat&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+">IDEA 创建 Struts2 简单工程</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://badsn.com/post/visualgdb-52-zi-jin-cheng-diao-shi-yu-dao-de-wen-ti/"" data-c="
+          &lt;p&gt;VisualGDB 是 Visual Studio 的一个插件，用于在 Windows 下开发 Linux 程序，记录 VisualGDB 调试 Linux 子进程方法&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;ul&gt;
+&lt;li&gt;问题描述：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在 GDB 调试中，使用下面命令进行子进程调试，但在 VisualGDB 工程属性中 startup before 设置并不能生效&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    set follow-fork-mode child
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;解决办法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;VisualGDB 工程属性中 startup before 设置&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;    set follow-fork-mode child
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;调试，出现 SIGHUP 异常中断&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://badsn.com/post-images/1559203564747.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+然后打开异常设置，如图勾选&lt;br&gt;
+&lt;img src=&#34;https://badsn.com/post-images/1559203600985.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+完成此步骤后，调试子进程会不进入。&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;调试子进程不进入&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;调试窗口 -- GDB Session -- Signals &amp;amp; Catchpoint （倒数第二个闪电按钮），取消 选择 SIGHUP 后面的 Pass to 选框&lt;br&gt;
+&lt;img src=&#34;https://badsn.com/post-images/1559203615892.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+">VisualGDB 5.2 子进程调试 遇到的问题</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://badsn.com/post/about/"" data-c="
+          &lt;p&gt;这是关于的页面，可以在这里向世界介绍你！&lt;/p&gt;
+">关于</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://badsn.com/post/hello-gridea/"" data-c="
+          &lt;p&gt;👏  欢迎使用 &lt;strong&gt;Gridea&lt;/strong&gt; ！&lt;br&gt;
+✍️  &lt;strong&gt;Gridea&lt;/strong&gt; 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/getgridea/gridea&#34;&gt;Github&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://hvenotes.fehey.com/&#34;&gt;Gridea 主页&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://fehey.com/&#34;&gt;示例网站&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;特性&#34;&gt;特性👇&lt;/h2&gt;
+&lt;p&gt;📝  你可以使用最酷的 &lt;strong&gt;Markdown&lt;/strong&gt; 语法，进行快速创作&lt;/p&gt;
+&lt;p&gt;🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片&lt;/p&gt;
+&lt;p&gt;🏷️  你可以对文章进行标签分组&lt;/p&gt;
+&lt;p&gt;📋  你可以自定义菜单，甚至可以创建外部链接菜单&lt;/p&gt;
+&lt;p&gt;💻  你可以在 &lt;strong&gt;𝖶𝗂𝗇𝖽𝗈𝗐𝗌&lt;/strong&gt; 或 &lt;strong&gt;𝖬𝖺𝖼𝖮𝖲&lt;/strong&gt; 设备上使用此客户端&lt;/p&gt;
+&lt;p&gt;🌎  你可以使用 &lt;strong&gt;𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌&lt;/strong&gt; 或 &lt;strong&gt;Coding Pages&lt;/strong&gt; 向世界展示，未来将支持更多平台&lt;/p&gt;
+&lt;p&gt;💬  你可以进行简单的配置，接入 &lt;a href=&#34;https://github.com/gitalk/gitalk&#34;&gt;Gitalk&lt;/a&gt; 或 &lt;a href=&#34;https://github.com/SukkaW/DisqusJS&#34;&gt;DisqusJS&lt;/a&gt; 评论系统&lt;/p&gt;
+&lt;p&gt;🇬🇧  你可以使用&lt;strong&gt;中文简体&lt;/strong&gt;或&lt;strong&gt;英语&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力&lt;/p&gt;
+&lt;p&gt;🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步&lt;/p&gt;
+&lt;p&gt;🌱 当然 &lt;strong&gt;Gridea&lt;/strong&gt; 还很年轻，有很多不足，但请相信，它会不停向前🏃&lt;/p&gt;
+&lt;p&gt;未来，它一定会成为你离不开的伙伴&lt;/p&gt;
+&lt;p&gt;尽情发挥你的才华吧！&lt;/p&gt;
+&lt;p&gt;😘 Enjoy~&lt;/p&gt;
+">Hello Gridea</a>
+      </div>
+      
+    </div>
+    <div class="page">
+      <div id="page_ul"></div>
+    </div>
+  </div>
+</div>
+<script>
+  !function () {
+    let searchMask = document.querySelector('#search_mask');
+    let result = document.querySelector('#result');
+    let items = document.querySelectorAll('.item');
+    let searchBox = document.querySelector('#search');
+    let statCount = document.querySelector('#stat_count');
+    let statTimes = document.querySelector('#stat_times');
+    let pageUl = document.querySelector('#page_ul');
+    let close = document.querySelector('#close');
+    
+    close.addEventListener('click', function() {
+      searchMask.style = 'display: none;'
+    })
+
+    let finds = [];
+    let contents = [];
+    let pageSize = 10;
+    items.forEach(item => {
+      let a = item.querySelector('a');
+      contents.push({
+        title: a.innerText,
+        details: a.dataset.c,
+        link: a.href
+      })
+      item.remove();
+    })
+
+    function insertStr(soure, start, count) {
+      let newStr = soure.substr(start, count);
+      return soure.slice(0, start) + '<em>' + newStr + '</em>' + soure.slice(start + count);
+    }
+
+    pageUl.addEventListener('click', function(event) {
+      let target = event.target;
+      if (target.__proto__ === HTMLSpanElement.prototype) {
+        appendResults(parseInt(target.dataset.i));
+      }
+    })
+
+    function appendResults(index) {
+      let htmlResult = '';
+      let start = index || 0;
+      let end = Math.min(start + pageSize, finds.length);
+      for (let i = start; i < end; i++) {
+        const current = finds[i];
+        let html = current.title;
+        let sum = 0;
+        let positions = current.positions;
+        positions.forEach(position => {
+          html = insertStr(html, position.start + sum, position.count);
+          sum += 9;
+        })
+        htmlResult += `<div class="item"><a class="result-title" href="${current.link}">${html}</a></div>`;
+      }
+      result.innerHTML = htmlResult;
+      pageUl.innerHTML = '';
+      let count = finds.length / pageSize;
+      let lis = '';
+      if (start !== 0) {
+        lis += `<span class="fa fa-angle-left" data-i='${start - 1}'></span>`;
+      }
+      for (let i = 0; i < count; i++) {
+        lis += `<span class='${i === start?'current':''}' data-i='${i}'>${i+1}</span>`;     
+      }
+      if (start+1 < count) {
+        lis += `<span class="fa fa-angle-right" data-i='${start+1}'></span>`;  
+      }
+      pageUl.innerHTML = lis;
+    }
+
+    function search(delay) {
+      let timer = null
+      return function () {
+        clearTimeout(timer)
+        timer = setTimeout(() => {
+          let start = Date.now();
+          let segments = searchBox.value.split(' ').filter(c => c != '');
+          if (segments.length <= 0) {
+            return;
+          }
+          finds = [];
+          let htmlResult = '';
+          contents.forEach(content => {
+            let title = content.title;
+            let positions = [];
+            let find = false;
+            segments.forEach((segment) => {
+              if (content.title.includes(segment)) {
+                find = true;
+                positions.push({
+                  start: content.title.indexOf(segment),
+                  count: segment.length
+                })
+              } else if (content.details.includes(segment)) {
+                find = true;
+              }
+            });
+            if (find) {
+              finds.push({
+                title: content.title,
+                link: content.link,
+                positions
+              });
+            }
+          })
+          appendResults(0);
+          statCount.textContent = finds.length;
+          statTimes.textContent = Date.now() - start;
+        }, delay)
+      }
+    }
+    searchBox.addEventListener('input', search(200));
+  }()
+</script>
+
+<input hidden id="copy" />
+<script>
+  !function () {
+    let times = document.querySelectorAll('.publish-time');
+    for (let i = 0; i < times.length; i++) {
+      let date = times[i].dataset.t;
+      let time = Math.floor((new Date().getTime() - new Date(date).getTime()) / 1000);
+      if (time < 60) {
+        str = time + '秒之前';
+      } else if (time < 3600) {
+        str = Math.floor(time / 60) + '分钟之前';
+      } else if (time >= 3600 && time < 86400) {
+        str = Math.floor(time / 3600) + '小时之前';
+      } else if (time >= 86400 && time < 259200) {
+        str = Math.floor(time / 86400) + '天之前';
+      } else {
+        str = times[i].textContent;
+      }
+      times[i].textContent = str;
+    }
+  }();
+</script>
+
+<script>
+  let language = '';
+  if (language !== '') {
+    let map = new Map();
+    if (language === 'en') {
+      map.set('search', 'Search');
+      map.set('category', 'Categories');
+      map.set('article', 'Articles');
+      map.set('tag', 'Tags');
+      map.set('top', 'Top');
+      map.set('publish', 'published');
+      map.set('minute', ' minutes');
+      map.set('read-more', 'Read More');
+      map.set('view', 'View');
+      map.set('words', ' words');
+      map.set('category-in', 'category in');
+      map.set('preview', 'Meta');
+      map.set('index', 'Toc');
+      map.set('no-archives', "You haven't created yet");
+      map.set('archives', " articles in total");
+      map.set('cloud-tags', " tags in total");
+      map.set('copyright', "Copyright: ");
+      map.set('author', "Author: ");
+      map.set('link', "Link: ");
+      map.set('leave-message', "Leave a message");
+      map.set('format', "Links Format");
+      map.set('site-name', "Name: ");
+      map.set('site-link', "Link: ");
+      map.set('site-desc', "Desc: ");
+      map.set('stat', " related results, taking ");
+      map.set('stat-time', " ms");
+      map.set('site-img', "Image: ");
+    }
+
+    if (map.size > 0) {
+      let lanElems = document.querySelectorAll('.language');
+      lanElems.forEach(elem => {
+        let lan = elem.dataset.lan, text = map.get(lan);
+        if (elem.__proto__ === HTMLInputElement.prototype) {
+          elem.placeholder = text
+        } else {
+          if (elem.dataset.count) {
+            text = elem.dataset.count + text;
+          }
+          elem.textContent = text;
+        }
+      })
+    }
+  }
+
+  window.Clipboard = (function (window, document, navigator) {
+    var textArea,
+      copy;
+
+    // 判断是不是ios端
+    function isOS() {
+      return navigator.userAgent.match(/ipad|iphone/i);
+    }
+    //创建文本元素
+    function createTextArea(text) {
+      textArea = document.createElement('textArea');
+      textArea.value = text;
+      textArea.style.width = 0;
+      textArea.style.height = 0;
+      textArea.clientHeight = 0;
+      textArea.clientWidth = 0;
+      document.body.appendChild(textArea);
+    }
+    //选择内容
+    function selectText() {
+      var range,
+        selection;
+
+      if (isOS()) {
+        range = document.createRange();
+        range.selectNodeContents(textArea);
+        selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        textArea.setSelectionRange(0, 999999);
+      } else {
+        textArea.select();
+      }
+    }
+
+    //复制到剪贴板
+    function copyToClipboard() {
+      try {
+        document.execCommand("Copy")
+      } catch (err) {
+        alert("复制错误！请手动复制！")
+      }
+      document.body.removeChild(textArea);
+    }
+
+    copy = function (text) {
+      createTextArea(text);
+      selectText();
+      copyToClipboard();
+    };
+
+    return {
+      copy: copy
+    };
+  })(window, document, navigator);
+
+  function copyCode(e) {
+    if (e.srcElement.tagName === 'SPAN' && e.srcElement.classList.contains('copy-code')) {
+      let code = e.currentTarget.querySelector('code');
+      var text = code.innerText;
+      if (e.srcElement.textContent === '复制成功') {
+        return;
+      }
+      e.srcElement.textContent = '复制成功';
+      (function (elem) {
+        setTimeout(() => {
+          if (elem.textContent === '复制成功') {
+            elem.textContent = '复制代码'
+          }
+        }, 1000);
+      })(e.srcElement)
+      Clipboard.copy(text);
+    }
+  }
+
+  let pres = document.querySelectorAll('pre');
+  pres.forEach(pre => {
+    let code = pre.querySelector('code');
+    let copyElem = document.createElement('span');
+    copyElem.classList.add('copy-code');
+    copyElem.textContent = '复制代码';
+    pre.appendChild(copyElem);
+    pre.onclick = copyCode
+  })
+
+</script>
+<script src="/media/js/motion.js"></script>
+
+
+  <script
+    src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+  <script>
+    var scroll = new SmoothScroll('a[href*="#"]', {
+      speed: 200
+    });
+  </script>
+
+
+
+<script src="/media/js/mouse/love.js"></script>
+
+
+
+
+
+</html>
